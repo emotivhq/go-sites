@@ -1,0 +1,1 @@
+angular.module('VariantNinjaAnalytics',['angulartics','angulartics.google.tagmanager','angulartics.google.analytics']);

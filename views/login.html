@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <title>Variant Ninja Login</title>
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css">
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3 jumbotron">
+
+    <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+
+
+    <form action="/login" method="post">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg">Login</button>
+    </form>
+
+    <hr>
+
+    <p>Here by mistake? You can go <a href="/">home</a>.</p>
+
+</div>
+
+</div>
+</body>
+</html>

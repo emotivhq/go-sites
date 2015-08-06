@@ -1,0 +1,58 @@
+extends base
+
+block vars
+  - var title = 'Forgot Your Password?'
+  - var description = 'Forgot your password? No worries!'
+  - var bodytag = 'login'
+
+block body
+  section.cta.cta-3.bg-secondary
+    .container
+        .row.v-align-children
+          .col-sm-4.col-md-5.text-left
+            h3
+              | Build smarter sites
+              br
+              | with no developers.
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            p
+              | &ldquo;Sell better stuff or Sell. Stuff. Better.&rdquo;
+            | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+            span &mdash; Andrew Razeghi, Partner, Techstars
+          | &#x9;&#x9;&#x9;&#x9;&#x9;
+          | &#x9;&#x9;&#x9;&#x9;&#x9;&#x9;
+          .col-md-7.col-sm-8
+            
+            .view.login-view
+              .box.row
+                .email-password-area.col-xs-12.large.col-sm-12
+                  .header
+                    span.
+                      Forgot your password?
+                    p(style='padding-right: 0;')
+                      Enter your email address below to reset your password. You will
+                      be sent an email which you will need to open to continue. You may
+                      need to check your spam folder.
+
+                  if error
+                    .alert.alert-danger.bad-login
+                      p #{error}
+
+                  if formErrors
+                    .alert.alert-danger.bad-login
+                      each error in formErrors
+                        p #{error}
+                  
+                  form.login-form.form-horizontal(method='post', role='form' style='width:99%')
+                    input(name='_csrf', type='hidden', value=csrfToken)
+                    .form-group.group-email
+                      label.col-sm-4 Email
+
+                      div.col-sm-8
+                        input.form-control(placeholder='Email', required=true, name='email', type='text')
+
+                    div
+                      button.login.btn.btn-login.btn-primary.text-white(type='submit') Submit
+
+              if app.get('stormpathEnableLogin')
+                a.forgot(href="#{app.get('stormpathLoginUrl')}") Back to Log In

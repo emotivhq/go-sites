@@ -1,0 +1,82 @@
+{ 
+	"options":[
+		{	
+			"type":"toggle",
+			"selector":"section",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"hidden-xs",
+			"text":"Hide On Mobile",
+			"initial":"auto",
+			"icon":"phone"
+		},
+		{	
+			"type":"toggle",
+			"disposableSelector":".toggle-bg-mrv",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"bg-secondary",
+			"text":"Alternate BG",
+			"initial":"auto",
+			"icon":"droplet"
+		},
+		{	
+			"type":"toggle",
+			"selector":".features-14",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"no-pad",
+			"text":"Remove Padding",
+			"initial":"auto",
+			"icon":"resize-height"
+		},
+		{	
+			"type":"toggle",
+			"selector":".features-2 .feature",
+			"menu":"context",
+			"class":"text-center",
+			"text":"Center Text",
+			"initial":"auto",
+			"icon":"justify-center"
+		},
+		{	
+			"type":"toggle",
+			"selector":".toggle-bg-mrv",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"bg-dark",
+			"text":"Dark Skin",
+			"initial":"auto",
+			"icon":"contrast"
+		},
+		{	
+			"type":"toggle",
+			"selector":"section:nth-of-type(1)",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"fixed-header",
+			"text":"Parallax",
+			"initial":"auto",
+			"icon":"data-transfer-upload"
+		},
+		{	
+			"type":"toggle",
+			"selector":".header-11",
+			"menu":"utility",
+			"submenu":"Section Controls",
+			"class":"overlay",
+			"text":"Tint Overlay",
+			"initial":"auto",
+			"icon":"contrast"
+		},
+		{	
+			"type":"toggle",
+			"selector":".features-18 .background-image-holder",
+			"menu":"context",
+			"class":"overlay",
+			"text":"Tint Hover",
+			"initial":"auto",
+			"icon":"contrast"
+		}
+	]
+}

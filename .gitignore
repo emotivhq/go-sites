@@ -1,0 +1,14 @@
+.project
+.idea
+.settings
+node_modules
+Thumbs.db
+.DS_Store
+public/bower-libs
+**NOTE:**
+**Note:**
+newrelic_agent.log
+*.tar.gz
+*.tar
+.codio
+*.log

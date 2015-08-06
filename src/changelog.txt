@@ -1,0 +1,14 @@
+===================================================================
+v 1.1.0 - 5 February 2015
+-------------------------------------------------------------------
+NEW - Plain fullwidth map element
+NEW - Simple message enquiry form element
+
+
+Files affected:
+-------------------------------------------------------------------
+-    variant/*
+-    css/theme.css and colour scheme .css files
+-    css/less/theme.less and colour scheme .less files
+
+===================================================================

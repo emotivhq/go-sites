@@ -1,0 +1,84 @@
+{ 
+	"options":[
+		{
+			"buttonText":"Edit Video Embed",
+			"modalTitle":"Edit Video Embed",
+			"modalIntro":"Get the embed code from your preferred video provider and paste here.",
+			"modalInputLabel":"Video Embed Code:",
+			"selector":".embed-video-container,iframe",
+			"attribute":"no-src",
+			"modalInputIcon":"video"
+		},
+		{
+			"buttonText":"Edit Placeholder",
+			"modalTitle":"Edit Placeholder",
+			"modalIntro":"Edit the placeholder text for this input. Placeholder text appears before the user has started typing.",
+			"modalInputLabel":"Placeholder Text:",
+			"selector":"input[type='text']",
+			"attribute":"placeholder",
+			"modalInputIcon":"text"
+		},
+		{
+			"buttonText":"Gallery Speed",
+			"modalTitle":"Edit Gallery Speed",
+			"modalIntro":"Speed (in milliseconds) for each image to be shown.",
+			"modalInputLabel":"Time (milliseconds):",
+			"selector":".hover-gallery",
+			"attribute":"speed",
+			"modalInputIcon":"clock",
+			"sectionControl":"true",
+			"refresh":"true"
+		},
+		{
+			"buttonText":"Edit Value",
+			"modalTitle":"Edit Input Value",
+			"modalIntro":"Edit the value for this input. The value is the text that appears on the submit button.",
+			"modalInputLabel":"Button Text:",
+			"selector":"input[type='submit']",
+			"attribute":"value",
+			"modalInputIcon":"text"
+		},
+		{
+			"buttonText":"Edit Feed",
+			"modalTitle":"Edit Instagram Feed",
+			"modalIntro":"Edit the Instagram feed by placing your desired username here.",
+			"modalInputLabel":"Username:",
+			"selector":".instafeed",
+			"attribute":"data-user-name",
+			"modalInputIcon":"instagram",
+			"sectionControl":"true",
+			"refresh":"true"
+		},
+		{
+			"buttonText":"Edit Feed",
+			"modalTitle":"Edit Twitter Feed",
+			"modalIntro":"Create a widget from your Twitter dashboard and paste the Widget ID here. For a more detailed example of how to obtain a widget ID, please see the template documentation.",
+			"modalInputLabel":"Widget ID:",
+			"selector":".tweets-feed",
+			"attribute":"data-widget-id",
+			"modalInputIcon":"twitter",
+			"sectionControl":"true",
+			"refresh":"true"
+		},
+		{
+			"buttonText":"Edit Map Embed",
+			"modalTitle":"Edit Map Embed",
+			"modalIntro":"Copy the iframe embed code from your mapping provider and paste it here.",
+			"modalInputLabel":"Embed Code:",
+			"selector":".map-holder > iframe",
+			"attribute":"no-src",
+			"modalInputIcon":"map-marker",
+			"sectionControl":"true"
+		},
+		{
+			"buttonText":"Edit Newsletter Embed",
+			"modalTitle":"Edit Newsletter Embed",
+			"modalIntro":"Copy the form code from Mailchimp or Campaign Monitor here.  Use the `Classic` form in Mailchimp. Use the standard form in Campaign Monitor.  Leaving this empty will default to email form behaviour (sent through mail.php)",
+			"modalInputLabel":"Form Embed Code:",
+			"selector":".mail-list-form:not(.contact-3 .mail-list-form)",
+			"attribute":"srcdoc",
+			"modalInputIcon":"envelope-closed",
+			"sectionControl":"true"
+		}
+	]
+}
