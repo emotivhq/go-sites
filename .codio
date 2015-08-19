@@ -1,0 +1,28 @@
+{
+// Configure your Run and Preview buttons here.
+
+// Run button configuration
+  "commands": {
+        "Dev Node Server 3001": "export PORT=3001 && node server.js",
+        "Always On Node Server 9500 ($ disown -a )": "export PORT=9500 && node server.js&",
+        "Always On Node Server 3000 ($ disown -a)": "export PORT=3000 && node server.js&",
+        "Start Express Server": "npm start",
+	    "Manual Build": "'builder-js ; gulp angular-js ; gulp variant-js ; gulp copy-js ; gulp less ; gulp css ; gulp builder-theme ; gulp builder-less ; gulp copy-font ; gulp builder-font ; gulp builder-img ; gulp copy-img ; gulp cache ; gulp-marvel",
+	  "Start SSH agent": "ssh-agent -s",
+	  "List SSH fingerprints": "ssh-add -l",
+	  "Test SSH to Github": "ssh -vT git@github.com",
+	  "Turn on & cache with credential helper": "git config --global credential.helper 'cache --timeout=3333600'",  
+	  "Github oAuth Token": "<enter your token here so you don't forget> (Get Help: http://bit.ly/1NlFaFx & http://bit.ly/1Ep65b8)",
+	  "Node version": "node --version"
+  },
+
+// Preview button configuration
+  "preview": {
+        "Preview SSL": "https://{{domain}}:9500/",
+        "Preview": "http://{{domain}}:3000/",
+        "Preview 3001": "http://{{domain}}:3001/",
+        "Ungit": "http://{{domain}}:8448/#/repository?path=%2Fhome%2Fcodio%2Fworkspace",
+        "Project Index (static)": "https://{{domain}}/{{index}}",
+        "Current File (static)": "https://{{domain}}/{{filepath}}"
+  }
+}

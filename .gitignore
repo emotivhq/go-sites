@@ -10,5 +10,4 @@ public/bower-libs
 newrelic_agent.log
 *.tar.gz
 *.tar
-.codio
 *.log
