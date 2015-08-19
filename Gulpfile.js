@@ -335,34 +335,39 @@ gulp.task('builder-img', ['clean-builder-img'], function() {
  * gulp 
  */
 gulp.task('clean-marvel-css', function() {
-	return gulp.src('./public/marvel/css/**/*')
+	return gulp.src('./public/marvel/css/**/*.css')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
 });
 gulp.task('clean-marvel-html', function() {
 	return gulp.src('./public/marvel/*.html')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
 });
 gulp.task('clean-marvel-js', function() {
-	return gulp.src('./public/marvel/js/**/*')
+	return gulp.src('./public/marvel/js/**/*.js')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
 });
 gulp.task('clean-marvel-img', function() {
-	return gulp.src('./public/marvel/images/**/*')
+	return gulp.src('./public/marvel/images/**/*.jpg|png|jpeg|svg')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
 });
 gulp.task('clean-marvel-vendor', function() {
-	return gulp.src('./public/marvel/vendor/**/*')
+	return gulp.src('./public/marvel/vendor')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
 });
 gulp.task('clean-marvel-switcher', function() {
-	return gulp.src('./public/marvel/style-switcher/**/*')
+	return gulp.src('./public/marvel/style-switcher')
 		// .pipe(debug())
-        .pipe(clean());
+        .pipe(clean({force: true}));
+});
+gulp.task('clean-marvel-landing', function() {
+	return gulp.src('./public/marvel/landing')
+		// .pipe(debug())
+        .pipe(clean({force: true}));
 });
 gulp.task('marvel-css', ['clean-marvel-css'], function() {
 	return gulp.src([
@@ -488,12 +493,13 @@ gulp.task('default', function(cb) {
 
 gulp.task('marvel', function(cb) {
 	runSequence([
+			'marvel-html',
 			'marvel-js',
 			'marvel-css',
 			'marvel-img',
-			'marvel-html',
 			'marvel-vendor',
-			'marvel-switcher'
+			'marvel-switcher',
+			'marvel-landing'
 		],
 		cb);
 });
