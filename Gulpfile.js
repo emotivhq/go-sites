@@ -354,6 +354,16 @@ gulp.task('clean-marvel-img', function() {
 		// .pipe(debug())
         .pipe(clean());
 });
+gulp.task('clean-marvel-vendor', function() {
+	return gulp.src('./public/marvel/vendor/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-marvel-switcher', function() {
+	return gulp.src('./public/marvel/style-switcher/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
 gulp.task('marvel-css', ['clean-marvel-css'], function() {
 	return gulp.src([
         './src/themes/marvel/css/**/*'
@@ -382,7 +392,27 @@ gulp.task('marvel-img', ['clean-marvel-img'], function() {
 		// .pipe(debug())
         .pipe(gulp.dest('./public/marvel/images/'));
 });
-
+gulp.task('marvel-vendor', ['clean-marvel-vendor'], function() {
+	return gulp.src([
+        './src/themes/marvel/vendor/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/vendor/'));
+});
+gulp.task('marvel-landing', ['clean-marvel-landing'], function() {
+	return gulp.src([
+        './src/themes/marvel/landing/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/landing/'));
+});
+gulp.task('marvel-switcher', ['clean-marvel-switcher'], function() {
+	return gulp.src([
+        './src/themes/marvel/style-switcher/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/style-switcher/'));
+});
 
 /** __________________________________________
  * cache.manifest
@@ -461,7 +491,9 @@ gulp.task('marvel', function(cb) {
 			'marvel-js',
 			'marvel-css',
 			'marvel-img',
-			'marvel-html'
+			'marvel-html',
+			'marvel-vendor',
+			'marvel-switcher'
 		],
 		cb);
 });
