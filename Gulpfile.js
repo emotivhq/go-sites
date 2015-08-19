@@ -325,6 +325,65 @@ gulp.task('builder-img', ['clean-builder-img'], function() {
         .pipe(gulp.dest('./public/builder/img/'));
 });
 
+
+/** __________________________________________
+ * THEMES
+ */
+
+/** __________________________________________
+ * Marvel theme tasks - joel s
+ * gulp 
+ */
+gulp.task('clean-marvel-css', function() {
+	return gulp.src('./public/marvel/css/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-marvel-html', function() {
+	return gulp.src('./public/marvel/*.html')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-marvel-js', function() {
+	return gulp.src('./public/marvel/js/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('clean-marvel-img', function() {
+	return gulp.src('./public/marvel/images/**/*')
+		// .pipe(debug())
+        .pipe(clean());
+});
+gulp.task('marvel-css', ['clean-marvel-css'], function() {
+	return gulp.src([
+        './src/themes/marvel/css/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/css/'));
+});
+gulp.task('marvel-html', ['clean-marvel-html'], function() {
+	return gulp.src([
+        './src/themes/marvel/*.html'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/'));
+});
+gulp.task('marvel-js', ['clean-marvel-js'], function() {
+	return gulp.src([
+        './src/themes/marvel/js/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/js/'));
+});
+gulp.task('marvel-img', ['clean-marvel-img'], function() {
+	return gulp.src([
+        './src/themes/marvel/images/**/*'
+    ])
+		// .pipe(debug())
+        .pipe(gulp.dest('./public/marvel/images/'));
+});
+
+
 /** __________________________________________
  * cache.manifest
  */
@@ -396,6 +455,17 @@ gulp.task('default', function(cb) {
 		],
 		cb);
 });
+
+gulp.task('marvel', function(cb) {
+	runSequence([
+			'marvel-js',
+			'marvel-css',
+			'marvel-img',
+			'marvel-html'
+		],
+		cb);
+});
+
 
 function bumpTask(importance) {
 	return function() {

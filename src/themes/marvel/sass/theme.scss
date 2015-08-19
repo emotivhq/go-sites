@@ -1,0 +1,44 @@
+// =============================================================================
+// BOOTSTRAP CSS
+// =============================================================================
+@import "bootstrap/bootstrap";
+
+// =============================================================================
+// THEME CSS
+// =============================================================================
+// Core variables and mixins
+@import "theme/config/mixins";
+@import "theme/config/variables";
+
+// Base
+@import "theme/base/base";
+@import "theme/base/header";
+@import "theme/base/page-top";
+@import "theme/base/footer";
+
+//GUI
+@import "theme/gui/elements";
+@import "theme/gui/forms";
+@import "theme/gui/search";
+@import "theme/gui/sections";
+@import "theme/gui/carousel";
+@import "theme/gui/modern-slide-in";
+@import "theme/gui/sliders";
+@import "theme/gui/tabs";
+@import "theme/gui/parallax";
+@import "theme/gui/featured-foot";
+@import "theme/gui/category";
+@import "theme/gui/products";
+@import "theme/gui/shopping-cart";
+@import "theme/gui/countdown";
+@import "theme/gui/common";
+@import "theme/gui/accordion";
+@import "theme/gui/sidebar";
+@import "theme/gui/filter";
+@import "theme/gui/off-canvas";
+@import "theme/gui/blog";
+@import "theme/gui/page-error";
+@import "theme/gui/scroll-top-top";
+
+// LAYOUTS
+@import "theme/layouts/boxed";
