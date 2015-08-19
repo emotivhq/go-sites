@@ -14,7 +14,8 @@ http://vital-ego.box.codio.io:9500/
 ```
 
 ## How the Pack was prepared
-This Starter Pack was built on the `Node+Grun+MongoDB` Codio Certified Stack. We than ran the following commands before creating the Pack.
+This Starter Pack was built on the `Node+Grun+MongoDB` Codio Certified Stack. We then ran the following commands before creating the Pack.  
+*Note: The only command here that needs to be run is `npm install`*
 
 ```bash
 npm install -g express
