@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="vendor/flexslider/flexslider.css" media="screen">
   <link rel="stylesheet" href="vendor/chosen/chosen.css" media="screen">
   <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup.css" media="screen">
+  <link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.10.1/angular-material.css" media="screen">
 
   <!-- Theme CSS -->
   <link rel="stylesheet" href="css/theme.css">
@@ -37,6 +38,9 @@
       float: none;
       display: inline-block;
     }
+    .nav-top-sep > li:first-child + li > a {
+      border-left: none;
+    }
     .header-light .logo {
       margin-top: 8px;
     }
@@ -47,6 +51,19 @@
     }
     .push-left {
       margin-left: 65px;
+    }
+    .nav-searchbar .btn-primary {
+      height: 40px;
+      line-height: 1;
+      width: 100%;
+    }
+    .btn-primary:hover {
+      background-color: #d0311a;
+      border-color: #d0311a;
+    }
+    .btn-primary:focus {
+      background-color: #c12e18;
+      border-color: #c12e18;
     }
   </style>
 
@@ -70,7 +87,9 @@
       <div class="header-top light-header-top">
         <div class="container">
           <ul class="nav nav-pills nav-top nav-top-left nav-top-sep">
-            <li><span class="text-note">Give Gifts Together!</span>
+            <li>
+              <span class="text-note">Gift Giving Made Simple</span>
+              <span class="text-note hidden">Give Gifts Together</span>
             </li>
             <li><a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);">Login or Register</a>
             </li>
@@ -939,14 +958,31 @@
                     </select>
                   </div>
                 </div>
-                <div class="col-xs-7 col-md-9">
-                  <div class="form-group">
-                    <label class="sr-only" for="txtsearch">Search for a gift</label>
-                    <input type="text" style="font-family: 'Dosis', sans-serif; font-size: 16px;" class="form-control" id="txtsearch" placeholder="Search for a gift">
+                <div class="col-xs-7 col-md-8">
+
+                  <div ng-controller="DemoCtrl as ctrl" layout="column" class="autocompletedemoBasicUsage" ng-app="MyApp">
+                    <md-content>
+                      <form ng-submit="$event.preventDefault()">
+                        <md-autocomplete ng-disabled="ctrl.isDisabled" md-no-cache="ctrl.noCache" md-selected-item="ctrl.selectedItem" md-search-text-change="ctrl.searchTextChange(ctrl.searchText)" md-search-text="ctrl.searchText" md-selected-item-change="ctrl.selectedItemChange(item)" md-items="item in ctrl.querySearch(ctrl.searchText)" md-item-text="item.display" md-min-length="0" placeholder="What is your favorite US state?">
+                          <md-item-template>
+                            <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                          </md-item-template>
+                          <md-not-found>
+                            No matches found for "{{ctrl.searchText}}".
+                          </md-not-found>
+                        </md-autocomplete>
+                      </form>
+                    </md-content>
                   </div>
+
+
+
+                  <!--                     <label class="sr-only" for="txtsearch">Search for a gift</label>
+                    <input type="text" style="font-family: 'Dosis', sans-serif; font-size: 16px;" class="form-control" id="txtsearch" placeholder="Search for a gift"> -->
                 </div>
-                <div class="col-xs-2 col-md-1 pull-right">
-                  <button type="submit" class="btn btn-default">Search</button>
+
+                <div class="col-xs-2 col-md-2 pull-right">
+                  <button type="submit" class="btn btn-primary">Search</button>
                 </div>
               </div>
             </form>
@@ -2629,7 +2665,6 @@
     </div>
   </div>
 
-
   <!-- Vendor -->
   <script src="vendor/jquery/jquery.js"></script>
   <script src="vendor/bootstrap/bootstrap.js"></script>
@@ -2648,6 +2683,90 @@
 
   <!-- Theme Base, Components and Settings -->
   <script src="js/theme.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-aria.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-messages.min.js"></script>
+  <script src="https://gitcdn.xyz/repo/angular/bower-material/v0.10.1/angular-material.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      'use strict';
+      angular.module('MyApp').controller('DemoCtrl', DemoCtrl);
+
+      function DemoCtrl($timeout, $q, $log) {
+        var self = this;
+        self.simulateQuery = true;
+        self.isDisabled = false;
+        // list of `state` value/display objects
+        self.states = loadAll();
+        self.querySearch = querySearch;
+        self.selectedItemChange = selectedItemChange;
+        self.searchTextChange = searchTextChange;
+        // ******************************
+        // Internal methods
+        // ******************************
+        /**
+         * Search for states... use $timeout to simulate
+         * remote dataservice call.
+         */
+
+        function querySearch(query) {
+          var results = query ? self.states.filter(createFilterFor(query)) : self.states,
+            deferred;
+          if(self.simulateQuery) {
+            deferred = $q.defer();
+            $timeout(function () {
+              deferred.resolve(results);
+            }, Math.random() * 1000, false);
+            return deferred.promise;
+          } else {
+            return results;
+          }
+        }
+
+        function searchTextChange(text) {
+          $log.info('Text changed to ' + text);
+        }
+
+        function selectedItemChange(item) {
+          $log.info('Item changed to ' + JSON.stringify(item));
+        }
+        /**
+         * Build `states` list of key/value pairs
+         */
+
+        function loadAll() {
+          var allStates = 'Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware,\
+              Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana,\
+              Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana,\
+              Nebraska, Nevada, New Hampshire, New Jersey, New Mexico, New York, North Carolina,\
+              North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina,\
+              South Dakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia,\
+              Wisconsin, Wyoming';
+          return allStates.split(/, +/g).map(function (state) {
+            return {
+              value: state.toLowerCase(),
+              display: state
+            };
+          });
+        }
+        /**
+         * Create filter function for a query string
+         */
+
+        function createFilterFor(query) {
+          var lowercaseQuery = angular.lowercase(query);
+          return function filterFn(state) {
+            return(state.value.indexOf(lowercaseQuery) === 0);
+          };
+        }
+      }
+    })();
+  </script>
 
 </body>
 
