@@ -1,0 +1,27 @@
+{
+ "sections": [
+  {
+   "id": "d10b28e-2687-78b6-accd-6f4b83c454d6",
+   "title": "Section 1",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Section-1-d10b.md",
+   "chapter": false,
+   "reset": []
+  },
+  {
+   "id": "1c346daf-2f4-1b05-faf6-2122cda710df",
+   "title": "Section 2",
+   "files": [],
+   "path": [],
+   "type": "markdown",
+   "content-file": ".guides/content/Section-2-1c34.md",
+   "chapter": false,
+   "reset": []
+  }
+ ],
+ "theme": "light",
+ "scripts": [],
+ "lexikonTopic": ""
+}
