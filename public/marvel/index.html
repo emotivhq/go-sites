@@ -66,6 +66,13 @@
     [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
       display: none !important;
     }
+	.st-ui-search-input, .st-default-search-input {
+		width: 100% !important; 
+		border: none !important; 
+		height: 40px !important;
+		background: #fff 8px 14px no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXB…Hx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC) !important; 
+	}
+	  
   </style>
 
   <script src="vendor/modernizr/modernizr.js"></script>
@@ -959,7 +966,7 @@
                   </div>
                 </div>
                 <div class="col-xs-7 col-md-8">
-                  <div layout="column" class="autocompletedemoBasicUsage" ng-cloak>
+                  <div layout="column" class="autocompletedemoBasicUsage">
                   	<input type="search" class="st-default-search-input ng-isolate-scope md-default-theme" placeholder="What gift would you like to give?">
                   </div>
                 </div>
@@ -2241,7 +2248,7 @@
           <div class="col-md-3">
             <div class="footer-copyright">
               <p>
-                <img src="images/logo.png" alt="">
+                <img src="images/logo.png" alt="" style="max-height: 45px;">
               </p>
               <p>© 2014 GiftStarter. All Rights Reserved.</p>
               <ul class="card-icons">
