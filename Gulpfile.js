@@ -471,7 +471,7 @@ gulp.task('connect', function () {
   });
 });
 gulp.task('html', function () {
-  gulp.src('views/experiments/homepage/marvel/*.html').pipe(connect.reload());
+  gulp.src('./views/experiments/homepage/**/*.html').pipe(connect.reload());
 });
 gulp.task('watch', function () {
   livereload.listen();
