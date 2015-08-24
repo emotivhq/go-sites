@@ -9,72 +9,19 @@
   <meta name="description" content="Group Gifts: GiftStarter divides the perfect gift into pieces; giving friends and family the ability to purchase 1 or more pieces as they wish.">
   <meta name="author" content="giftstarter.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' type='text/css'>
   <link rel="stylesheet" href="marvel/vendor/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="marvel/vendor/owlcarousel/owl.carousel.css" media="screen">
   <link rel="stylesheet" href="marvel/vendor/owlcarousel/owl.theme.css" media="screen">
-  <!--     <link href="marvel/vendor/owl-carousel/owl.transitions.css" rel="stylesheet" media="screen"> -->
+  <link rel="stylesheet" href="marvel/vendor/owlcarousel/owl.transitions.css" media="screen">
   <link rel="stylesheet" href="marvel/vendor/flexslider/flexslider.css" media="screen">
   <link rel="stylesheet" href="marvel/vendor/chosen/chosen.css" media="screen">
   <link rel="stylesheet" href="marvel/vendor/magnific-popup/magnific-popup.css" media="screen">
   <link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.10.1/angular-material.css" media="screen">
   <link rel="stylesheet" href="marvel/css/theme.css">
   <link rel="stylesheet" href="marvel/css/theme-animate.css">
-  <link href="marvel/css/colors/giftstarter/style.css" rel="stylesheet" id="layoutstyle">
-
-  <style>
-    .chosen-container-single .chosen-single abbr, .chosen-container-single .chosen-single div b {
-      margin-top: 8px;
-    }
-    .nav-top-left {
-      text-align: center;
-    }
-    .light-header-top .nav-top > li {
-      float: none;
-      display: inline-block;
-    }
-    .nav-top-sep > li:first-child + li > a {
-      border-left: none;
-    }
-    .header-light .logo {
-      margin-top: 8px;
-    }
-    .logo a img {
-      max-width: 170px;
-      width: 100%;
-      height: 100%;
-    }
-    .push-left {
-      margin-left: 65px;
-    }
-    .nav-searchbar .btn-primary {
-      height: 40px;
-      line-height: 1;
-      width: 100%;
-    }
-    .btn-primary:hover {
-      background-color: #d0311a;
-      border-color: #d0311a;
-    }
-    .btn-primary:focus {
-      background-color: #c12e18;
-      border-color: #c12e18;
-    }
-    md-autocomplete input:not(.md-input) {
-      font-family:'Dosis', sans-serif;
-      font-size: 16px;
-    }
-    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-      display: none !important;
-    }
-    .st-ui-search-input, .st-default-search-input {
-      width: 100% !important;
-      border: none !important;
-      height: 40px !important;
-      /* This url() is broken */
-      /*background: #fff 8px 14px no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXB…Hx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC) !important;*/
-    }
-  </style>
+  <link rel="stylesheet" href="marvel/css/colors/giftstarter/style.css" id="layoutstyle">
+  <link rel="stylesheet" href="marvel/css/custom.css">
 
   <script src="marvel/vendor/modernizr/modernizr.js"></script>
 
@@ -142,31 +89,28 @@
       <div class="container head-justify">
         <div class="navbar-header">
           <h1 class="logo">
-                        <a href="index.html">
-                            <img alt="GiftStarter" style="height: 45px;" src="marvel/images/logo.png">
-                        </a>
-				    </h1>
+            <a href="index.html">
+                <img alt="GiftStarter" src="marvel/images/logo.png">
+            </a>
+				  </h1>
         </div>
         <ul class="nav-icons pull-right">
           <li class="hidden-lg">
             <a href="#offcanvas" class="uk-navbar-toggle" data-uk-offcanvas>
               <span class="sr-only">Toggle navigation</span>
-              <i class="fa fa-bars"></i>
+              <i class="fa fa-bars"></i> Menu
             </a>
           </li>
           <li class="login hidden-xs">
-            <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);"><i class="fa fa-user"></i></a>
+            <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);"><i class="fa fa-user"></i> Login</a>
           </li>
           <li class="shopping-cart hidden-xs">
-            <a href="#offcanvas-cart" data-uk-offcanvas><i class="fa fa-shopping-cart"></i> <span>3</span></a>
+            <a href="#offcanvas-cart" data-uk-offcanvas><i class="fa fa-shopping-cart"></i> Cart <span>3</span></a>
           </li>
         </ul>
         <div class="navbar-collapse nav-main-collapse collapse">
           <nav class="nav-main pull-left push-left">
             <ul class="nav nav-pills nav-main-menu">
-              <!--               <li class="dropdown active">
-                <a href="#">Home</a>
-              </li> -->
               <li class="dropdown megamenu">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Brands</a>
                 <div class="dropdown-menu">
@@ -579,7 +523,7 @@
                 </div>
               </li>
               <li class="dropdown megamenu">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home & Wedding</a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home &amp; Wedding</a>
                 <div class="dropdown-menu">
                   <div class="mega-menu-content">
                     <div class="row">
@@ -2210,48 +2154,52 @@
     <footer id="footer" class="bg-color6">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <h4>Contact Us</h4>
-            <p>Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor</p>
-            <address>
-								Get Help: +555-555-5555<br>
-								Email: <a href="mailto:conceirge@giftstarter.com">conceirge@giftstarter.com</a>
-							</address>
-            <ul class="social-icons">
-              <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <div class="col-md-2">
+            <h4>Useful links</h4>
+            <ul class="list-links">
+              <li><a href="/howitworks">How It Works</a>
               </li>
-              <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <li><a href="/concierge">Gift Concierge</a>
               </li>
-              <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Google Plus"><i class="fa fa-google-plus"></i></a>
+              <li><a href="/faq">FAQ</a>
               </li>
-              <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fa fa-instagram"></i></a>
+              <li><a href="/about">About Us</a>
               </li>
-              <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Flickr"><i class="fa fa-flickr"></i></a>
+              <li><a href="/about#contactus">Contact Us</a>
+              </li>
+              <li><a href="/blog">Blog</a>
+              </li>
+              <li><a href="/press">Press</a>
+              </li>
+              <li><a href="/partners">Partners</a>
+              </li>
+              <li><a href="/terms">Terms &amp; Conditions</a>
+              </li>
+              <li><a href="/privacy">Privacy Policy</a>
               </li>
             </ul>
           </div>
           <div class="col-md-2">
-            <h4>Useful links</h4>
+            <h4>Social</h4>
             <ul class="list-links">
-              <li><a href="#">How It Works</a>
+              <li>
+                <a href="https://www.facebook.com/giftstart" target="_blank" data-toggle="tooltip" data-placement="top" title="Like Us On Facebook"><i class="fa fa-facebook"></i>&nbsp;&nbsp;Facebook</a>
               </li>
-              <li><a href="#">Gift Concierge</a>
+              <li>
+                <a href="https://twitter.com/giftstarter" target="_blank" data-toggle="tooltip" data-placement="top" title="Follow Us On Twitter"><i class="fa fa-twitter"></i>&nbsp;&nbsp;Twitter</a>
               </li>
-              <li><a href="#">FAQ</a>
+              <li>
+                <a href="https://www.linkedin.com/company/giftstarter" target="_blank" data-toggle="tooltip" data-placement="top" title="Connect With Us On LinkedIn"><i class="fa fa-linkedin"></i>&nbsp;&nbsp;LinkedIn</a>
               </li>
-              <li><a href="#">About Us</a>
+              <li>
+                <a href="https://www.pinterest.com/Giftstarter/" target="_blank" data-toggle="tooltip" data-placement="top" title="Follow Us On Pinterest"><i class="fa fa-pinterest"></i>&nbsp;&nbsp;Pinterest</a>
               </li>
-              <li><a href="#">Contact Us</a>
-              </li>
-              <li><a href="#">Blog</a>
-              </li>
-              <li><a href="#">Privacy Policy</a>
-              </li>
-              <li><a href="#">Terms + Conditions</a>
+              <li>
+                <a href="https://www.youtube.com/channel/UCDYNpHMV5-tOC1T9SGs8elQ" target="_blank" data-toggle="tooltip" data-placement="top" title="Watch Us On YouTube"><i class="fa fa-youtube"></i>&nbsp;&nbsp;YouTube</a>
               </li>
             </ul>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-5">
             <h4>Join Us</h4>
             <p>Don't miss our gifting tips, reminders, and special offers!</p>
             <form role="form" class="form-newsletter">
@@ -2259,15 +2207,20 @@
                 <label for="exampleInputEmail2" class="sr-only">Email address</label>
                 <input type="email" placeholder="Your email address" id="exampleInputEmail2" class="form-control">
               </div>
-              <button class="btn btn-lightdark" type="submit">Subscribe</button>
+              <button class="btn btn-lightdark" type="submit">Join Our Mailing List</button>
             </form>
           </div>
           <div class="col-md-3">
             <div class="footer-copyright">
-              <p>
-                <img src="marvel/images/logo.png" alt="" style="max-height: 45px;">
+              <p class="logo">
+                <a href="/">
+                  <img alt="GiftStarter" src="marvel/images/logo-w.png">
+                </a>
               </p>
-              <p>© 2014 GiftStarter. All Rights Reserved.</p>
+              <p>&copy;
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>&nbsp;Emotiv Labs, Inc. All Rights Reserved.</p>
               <ul class="card-icons">
                 <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="Paypal"><i class="fa fa-cc-paypal"></i></a>
                 </li>
@@ -2280,6 +2233,8 @@
                 <li><a href="#" target="_blank" data-toggle="tooltip" data-placement="top" title="AMEX"><i class="fa fa-cc-amex"></i></a>
                 </li>
               </ul>
+              <p><small>Patent Pending</small>
+              </p>
             </div>
           </div>
         </div>
@@ -2461,11 +2416,39 @@
   <div id="offcanvas" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
       <ul id="main-menu-offcanvas" class="uk-nav-offcanvas" data-uk-nav>
-        <li class="uk-parent uk-active">
-          <a href="index.html">Home</a>
+        <li class="uk-parent">
+          <a href="#">Brands</a>
+          <ul class="uk-nav-sub">
+            <li><a href="#">Coats and Trench coats</a>
+</li>
+<li><a href="#">Jackets</a>
+</li>
+<li><a href="#">Blazers</a>
+</li>
+<li><a href="#">Suits</a>
+</li>
+<li><a href="#">Edition</a>
+</li>
+<li><a href="#">Trousers</a>
+</li>
+<li><a href="#">Jeans</a>
+</li>
+<li><a href="#">Shirts</a>
+</li>
+<li><a href="#">T-shirts</a>
+</li>
+<li><a href="#">Sweatshirts</a>
+</li>
+<li><a href="#">Shoes</a>
+</li>
+<li><a href="#">Bags</a>
+</li>
+<li><a href="#">Accessories</a>
+</li>
+          </ul>
         </li>
         <li class="uk-parent">
-          <a href="#">Men</a>
+          <a href="#">Electronics</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Coats and Trench coats</a>
             </li>
@@ -2496,7 +2479,7 @@
           </ul>
         </li>
         <li class="uk-parent">
-          <a href="#">Women</a>
+          <a href="#">Baby</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Coats and Trench coats</a>
             </li>
@@ -2527,7 +2510,7 @@
           </ul>
         </li>
         <li class="uk-parent">
-          <a href="#">Babies</a>
+          <a href="#">Home &amp; Wedding</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Coats and Trench coats</a>
             </li>
@@ -2554,29 +2537,6 @@
             <li><a href="#">Bags</a>
             </li>
             <li><a href="#">Accessories</a>
-            </li>
-          </ul>
-        </li>
-        <li class="uk-parent">
-          <a href="#">Shop</a>
-          <ul class="uk-nav-sub">
-            <li><a href="shop-grid-fullwidth.html">Shop Grid Full Width</a>
-            </li>
-            <li><a href="shop-grid-classic.html">Shop Grid Classic</a>
-            </li>
-            <li><a href="shop-product-grid.html">Shop Product Grid</a>
-            </li>
-            <li><a href="shop-list-sidebar.html">Shop List Sidebar</a>
-            </li>
-            <li><a href="shop-product-detail-fullwidth.html">Product Detail FullWidth</a>
-            </li>
-            <li><a href="shop-product-detail-classic.html">Product Detail Classic</a>
-            </li>
-            <li><a href="shop-product-detail-custom.html">Product Detail Custom</a>
-            </li>
-            <li><a href="shop-cart-full.html">Shopping Cart Full</a>
-            </li>
-            <li><a href="shop-checkout.html">Shop-Checkout</a>
             </li>
           </ul>
         </li>
