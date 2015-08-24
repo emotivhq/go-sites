@@ -76,5 +76,15 @@ module.exports = function(app, stormpath) {
         // if they aren't redirect them to the home page
         res.redirect('/');
     }
+	
+/*
+ * Load Internal Go Site App routes
+*/
+
+// routes ======================================================================
+//require('./routes.js')(app, stormpath); // load our routes and pass in our app and fully configured stormpath
+require('./routes-go-sites.js')(app); // load our routes and pass in our app
+
+
 
 };
