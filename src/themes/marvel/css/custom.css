@@ -4,9 +4,13 @@
 .nav-top-left {
   text-align: center;
 }
-.light-header-top .nav-top > li {
+.light-header-top .nav-top > li, .header-top .nav-top > li {
   float: none;
   display: inline-block;
+}
+.light-header-top .nav-top-sep > li > a, .header-top .nav-top-sep > li > a {
+    padding-bottom: 0;
+    padding-top: 0;
 }
 .nav-top-sep > li:first-child + li > a {
   border-left: none;
