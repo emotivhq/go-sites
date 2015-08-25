@@ -17,6 +17,7 @@
 }
 .header-light .logo {
   margin-top: 8px;
+  margin-bottom: 0px;
 }
 .logo a img {
   max-width: 170px;
@@ -52,9 +53,28 @@ md-autocomplete input:not(.md-input) {
   height: 40px !important;
   background: #fff 8px 14px no-repeat url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6%2BR8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAG11AABzoAAA%2FN0AAINkAABw6AAA7GgAADA%2BAAAQkOTsmeoAAAESSURBVHjajNCxS9VRGMbxz71E4OwgoXPQxVEpXCI47%2BZqGP0LCoJO7UVD3QZzb3SwcHB7F3Uw3Zpd%2FAPCcJKG7Dj4u%2FK7Pwp94HDg5Xyf5z1Pr9YKImKANTzFXxzjU2ae6qhXaxURr%2FAFl9hHDy%2FwEK8z89sYVEp5gh84wMvMvGiSJ%2FEV85jNzLMR1McqfmN5BEBmnmMJFSvtpH7jdJiZv7q7Z%2BZPfMdcF6rN%2FT%2F1m2LGBkd4HhFT3dcRMY2FpskxaLNpayciHrWAGeziD7b%2BVfkithuTk8bkGa4wgWFmbrSTZOYeBvjc%2BucQj%2FEe6xHx4Taq1nrnKaW8K6XUUsrHWuvNevdRRLzFGwzvDbXAB9cDAHvhedDruuxSAAAAAElFTkSuQmCC) !important;
 }
+
+.nav-icons {
+    margin-top: 15px;
+}
+
 .nav-icons a {
     border-radius: 15px;
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
+}
+
+.header-light .nav-main {
+    margin-right: -15px;
+    margin-top: 20px;
+}
+
+.slide-item-caption-info h1, .slide-item-caption-info .product-cat {
+  color: #fff;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  border-color: #fff;
+  color: #fff;
 }
