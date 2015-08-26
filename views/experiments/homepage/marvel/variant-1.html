@@ -91,6 +91,7 @@
       </div>
 
       <div class="container head-justify">
+
         <div class="navbar-header">
           <p class="logo">
             <a href="#">
@@ -105,16 +106,18 @@
               <i class="fa fa-bars"></i> Menu
             </a>
           </li>
-          <li class="login hidden-xs">
-            <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);"><i class="fa fa-user"></i> Login</a>
-          </li>
-          <li class="shopping-cart hidden-xs">
-            <a href="#offcanvas-cart" data-uk-offcanvas><i class="fa fa-shopping-cart"></i> Cart <span>3</span></a>
-          </li>
         </ul>
         <div class="navbar-collapse nav-main-collapse collapse">
-          <nav class="nav-main pull-left push-left">
-            <ul class="nav nav-pills nav-main-menu">
+          <nav class="nav-main">
+            <ul class="nav nav-pills nav-main-menu pull-right">
+              <li class="dropdown megamenu">
+                <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);">Login</a>
+              </li>
+              <li class="dropdown megamenu">
+                <a href="#">Get Started</a>
+              </li>
+            </ul>
+            <ul class="nav nav-pills nav-main-menu pull-left push-left">
               <li class="dropdown megamenu">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Brands</a>
                 <div class="dropdown-menu">
@@ -980,9 +983,9 @@
           </div>
 
           <div class="row">
-            
+
             <div class="col-md-9 main-content main-content-right">
-              
+
               <section class="product-tab multi-carousel">
 
                 <!-- Nav tabs -->
@@ -999,7 +1002,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  
+
                   <div class="tab-pane active" id="featured">
                     <div class="row">
                       <div class="owl-carousel" data-plugin-options='{"items": 3, "singleItem": false, "pagination": false}'>
@@ -1137,7 +1140,7 @@
                     </div>
 
                   </div>
-                  
+
                   <div class="tab-pane" id="deals">
                     <div class="row">
                       <div class="owl-carousel" data-plugin-options='{"items": 3, "singleItem": false, "pagination": false}'>
@@ -1274,7 +1277,7 @@
                       </div>
                     </div>
                   </div>
-                  
+
                   <div class="tab-pane" id="newarrivals">
                     <div class="row">
                       <div class="owl-carousel" data-plugin-options='{"items": 3, "singleItem": false, "pagination": false}'>
@@ -1548,15 +1551,15 @@
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
 
               </section>
-              
+
             </div>
-            
+
             <div class="col-md-3 sidebar sidebar-left">
-              
+
               <aside class="block blk-thmbs-pro">
                 <h3>Top Gifts Given</h3>
                 <div class="owl-carousel" data-plugin-options='{"items": 1, "singleItem": true}'>
@@ -1622,7 +1625,7 @@
               </aside>
 
             </div>
-            
+
           </div>
         </div>
       </section>
@@ -1631,8 +1634,10 @@
         <div class="container" style="background-color: #333333;">
           <div class="text-center">
             <h3>Give the gift you know they deserve<br class="hidden-xs hidden-sm" /> regardless of the price tag.</h3>
-            <p>Most of us want to give a gift that's more expensive than we can afford.<br class="hidden-xs hidden-sm" /> GiftStarter allows us to bring people together to give our friends, families, and co-workers the gifts they really deserve.</p>
-            <p class="hidden"><small>Start Your First Campaign Today!</small></p>
+            <p>Most of us want to give a gift that's more expensive than we can afford.
+              <br class="hidden-xs hidden-sm" />GiftStarter allows us to bring people together to give our friends, families, and co-workers the gifts they really deserve.</p>
+            <p class="hidden"><small>Start Your First Campaign Today!</small>
+            </p>
             <a href="#" class="btn btn-primary btn-lg">Start A Campaign</a>
           </div>
         </div>
@@ -1641,7 +1646,7 @@
       <section class="product-tab top-tall">
         <div class="container">
           <h2 class="text-center">Browse Gift Categories</h2>
-          
+
           <!-- Nav tabs -->
           <ul class="nav nav-tabs pro-tabs mason-tabs narrow-tabs text-center" role="tablist">
             <li class="active"><a href="#brands" role="tab" data-toggle="tab">Brands</a>
@@ -2473,8 +2478,8 @@
 
   <div id="offcanvas" class="uk-offcanvas">
     <div class="uk-offcanvas-bar">
-      <ul id="main-menu-offcanvas" class="uk-nav-offcanvas" data-uk-nav>
-        <li class="uk-parent">
+      <ul id="main-menu-offcanvas" class="uk-nav uk-nav-offcanvas" data-uk-nav>
+        <li class="uk-parent" aria-expanded="false">
           <a href="#">Brands</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Apple</a>
@@ -2499,7 +2504,7 @@
             </li>
           </ul>
         </li>
-        <li class="uk-parent">
+        <li class="uk-parent" aria-expanded="false">
           <a href="#">Electronics</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Camera</a>
@@ -2524,7 +2529,7 @@
             </li>
           </ul>
         </li>
-        <li class="uk-parent">
+        <li class="uk-parent" aria-expanded="false">
           <a href="#">Baby</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Baby Crib</a>
@@ -2547,7 +2552,7 @@
             </li>
           </ul>
         </li>
-        <li class="uk-parent">
+        <li class="uk-parent" aria-expanded="false">
           <a href="#">Home &amp; Wedding</a>
           <ul class="uk-nav-sub">
             <li><a href="#">Barbecue Grill</a>
@@ -2572,79 +2577,14 @@
             </li>
           </ul>
         </li>
+        <li class="uk-nav-divider"></li>
+        <li>
+          <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);">Login</a>
+        </li>
+        <li>
+          <a href="#">Get Started</a>
+        </li>
       </ul>
-    </div>
-  </div>
-
-  <div id="offcanvas-cart" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-      <div class="uk-panel">
-        <h3>Cart</h3>
-        <ul class="list-thumbs-pro">
-          <li class="product">
-            <div class="thumb-item">
-              <div class="thumb-item-img">
-                <a href="#">
-                  <img width="80" src="marvel/images/products/product-1.jpg" alt="">
-                </a>
-              </div>
-
-              <div class="thumb-item-content">
-                <h3><a href="#">Striped full skirt</a></h3>
-                <div class="star-rating" title="Rated 5.00 out of 5">
-                  <span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-                </div>
-                <p class="product-price"><ins>$280.00</ins>
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="thumb-item">
-              <div class="thumb-item-img">
-                <a href="#">
-                  <img width="80" src="marvel/images/products/product-2.jpg" alt="">
-                </a>
-              </div>
-
-              <div class="thumb-item-content">
-                <h3><a href="#">Striped full skirt</a></h3>
-                <div class="star-rating" title="Rated 5.00 out of 5">
-                  <span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-                </div>
-                <p class="product-price"><ins>$280.00</ins>
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="product">
-            <div class="thumb-item">
-              <div class="thumb-item-img">
-                <a href="#">
-                  <img width="80" src="marvel/images/products/product-6.jpg" alt="">
-                </a>
-              </div>
-
-              <div class="thumb-item-content">
-                <h3><a href="#">Striped full skirt</a></h3>
-                <div class="star-rating" title="Rated 5.00 out of 5">
-                  <span style="width:100%"><strong class="rating">5.00</strong> out of 5</span>
-                </div>
-                <p class="product-price"><ins>$280.00</ins>
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
-        <ul class="list-inline cart-subtotals">
-          <li class="cart-subtotal"><strong>Subtotal:</strong>
-          </li>
-          <li class="price"><span class="amount"><strong>$431</strong></span>
-          </li>
-        </ul>
-        <a href="shop-cart-full.html" class="btn btn-dark btn-block">View Cart</a>
-        <a href="shop-checkout.html" class="btn btn-primary btn-block">Go to Checkout</a>
-      </div>
     </div>
   </div>
 

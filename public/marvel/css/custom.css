@@ -76,13 +76,18 @@ md-autocomplete input:not(.md-input) {
 .btn-group .btn + .btn {
   margin-left: 8px;
 }
-
 .partners-2 .list-partners li {
   margin: 0 35px;
 }
-
 @media (min-width: 992px) {
   .parallax .container .text-center {
     padding: 0px 18%
   }
+}
+.uk-nav-offcanvas .uk-nav-divider {
+  border-top: 1px solid rgba(255, 255, 255, .01);
+  margin: 0;
+  height: 4px;
+  background: rgba(0, 0, 0, .2);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, .3);
 }
