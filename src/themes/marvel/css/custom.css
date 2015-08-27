@@ -95,11 +95,10 @@ md-autocomplete input:not(.md-input) {
   color: #fff;
 }
 .search-wrap {
-  z-index: 1;
+  z-index: 10;
 }
 .search-wrap.affix {
   width: 100%;
-/*   background-color: #222222; */
 }
 .search-wrap.affix>.container {
   margin-bottom: 0;
