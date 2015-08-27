@@ -690,7 +690,7 @@
     <!-- End Header -->
 
     <!-- Begin Search Header -->
-    <section class="search-wrap" id="test" style="z-index: 1;">
+    <section class="search-wrap" id="search-wrap">
       <div class="container">
         <div class="row row-fluid">
           <div class="col-xs-1 col-sm-3">
@@ -3330,12 +3330,27 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
 
   <script>
-    $('#test').affix({
+    var $affixSearch = $('#search-wrap'),
+        $topBreakElement = $affixSearch.next(),
+        $bottomBreakElement = $affixSearch,
+        topBreakPoint = $topBreakElement.position().top,
+        bottomBreakPoint = $bottomBreakElement.position().top;
+    
+    $affixSearch.affix({
       offset: {
         top: function () {
-          return (this.top = $('.main.with-sidebar').position().top);
+          return (this.top = topBreakPoint);
+        },
+        bottom: function () {
+          return (this.top = bottomBreakPoint);
         }
       }
+    }).on('affixed.bs.affix', function (e) {
+      $(this).css({ top: -$affixSearch.height() }).animate({
+        top: '0'
+      }, 500, function() {
+        $(this).focus();
+      });;
     });
   </script>
   
