@@ -94,3 +94,18 @@ md-autocomplete input:not(.md-input) {
 .thumb-act-more .btn-cart:hover {
   color: #fff;
 }
+.search-wrap {
+  z-index: 1;
+}
+.search-wrap.affix {
+  -webkit-transition: width 20s ease-in-out;
+  -o-transition: width 20s ease-in-out;
+  transition: width 20s ease-in-out;
+  z-index: 1;
+  width: 100%;
+  background-color: #222222;
+  top: 0;
+}
+.search-wrap.affix>.container {
+  margin-bottom: 0;
+}

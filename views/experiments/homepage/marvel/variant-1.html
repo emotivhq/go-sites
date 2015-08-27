@@ -690,7 +690,7 @@
     <!-- End Header -->
 
     <!-- Begin Search Header -->
-    <section class="search-wrap">
+    <section class="search-wrap" id="test" style="z-index: 1;">
       <div class="container">
         <div class="row row-fluid">
           <div class="col-xs-1 col-sm-3">
@@ -3329,6 +3329,16 @@
   <script src="./bower-libs/angular-material/angular-material.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
 
+  <script>
+    $('#test').affix({
+      offset: {
+        top: function () {
+          return (this.top = $('.main.with-sidebar').position().top);
+        }
+      }
+    });
+  </script>
+  
   <script type="text/javascript">
     (function (w, d, t, u, n, s, e) {
       w['SwiftypeObject'] = n;
