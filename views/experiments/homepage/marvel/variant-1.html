@@ -690,7 +690,7 @@
     <!-- End Header -->
 
     <!-- Begin Search Header -->
-    <section class="search-wrap" id="search-wrap">
+    <section class="search-wrap clearfix" id="search-wrap">
       <div class="container">
         <div class="row row-fluid">
           <div class="col-xs-1 col-sm-3">
@@ -1258,6 +1258,7 @@
         </div>
       </div>
     </section>
+    <div id="affix-placeholder"></div>
     <!-- End Search Header -->
 
     <div role="main" class="main with-sidebar">
@@ -3333,25 +3334,32 @@
     var $affixSearch = $('#search-wrap'),
         $topBreakElement = $affixSearch.next(),
         $bottomBreakElement = $affixSearch,
-        topBreakPoint = $topBreakElement.position().top,
+        $affixPlaceholder = $('#affix-placeholder'),
+        topBreakPoint = ($topBreakElement.position().top + $affixSearch.outerHeight(true)),
         bottomBreakPoint = $bottomBreakElement.position().top;
     
     $affixSearch.affix({
       offset: {
-        top: function () {
-          return (this.top = topBreakPoint);
-        },
+        top: topBreakPoint,
         bottom: function () {
           return (this.top = bottomBreakPoint);
         }
       }
-    }).on('affixed.bs.affix', function (e) {
-      $(this).css({ top: -$affixSearch.height() }).animate({
+    }).on('affix.bs.affix', function (e) { // in the process of affixing
+      $affixPlaceholder.css({
+        height: $affixSearch.outerHeight(true)
+      });
+    }).on('affixed.bs.affix', function (e) { // affixed
+      $(this).css({
+        top: -$affixSearch.height()
+      }).animate({
         top: '0'
-      }, 500, function() {
-        $(this).focus();
-      });;
+      }, 500);;
+    }).on('affix-top.bs.affix', function (e) { // no longer affixed
+      $affixPlaceholder.css({ height: 0});
     });
+          
+          
   </script>
   
   <script type="text/javascript">
