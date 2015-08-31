@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="marvel/images/favicon.ico" />
   <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' type='text/css'>
+  <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto' type='text/css'>
   <link rel="stylesheet" href="marvel/vendor/fontawesome/css/font-awesome.css">
   <link rel="stylesheet" href="marvel/vendor/owlcarousel/owl.carousel.css" media="screen">
   <link rel="stylesheet" href="marvel/vendor/owlcarousel/owl.theme.css" media="screen">
@@ -3331,35 +3332,33 @@
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
 
   <script>
-    var $affixSearch = $('#search-wrap'),
-        $topBreakElement = $affixSearch.next(),
-        $bottomBreakElement = $affixSearch,
-        $affixPlaceholder = $('#affix-placeholder'),
-        topBreakPoint = ($topBreakElement.position().top + $affixSearch.outerHeight(true)),
-        bottomBreakPoint = $bottomBreakElement.position().top;
+//     var $affixSearch = $('#search-wrap'),
+//         $topBreakElement = $affixSearch.next(),
+//         $bottomBreakElement = $affixSearch,
+//         $affixPlaceholder = $('#affix-placeholder'),
+//         topBreakPoint = ($topBreakElement.position().top + $affixSearch.outerHeight(true)),
+//         bottomBreakPoint = $bottomBreakElement.position().top;
     
-    $affixSearch.affix({
-      offset: {
-        top: topBreakPoint,
-        bottom: function () {
-          return (this.top = bottomBreakPoint);
-        }
-      }
-    }).on('affix.bs.affix', function (e) { // in the process of affixing
-      $affixPlaceholder.css({
-        height: $affixSearch.outerHeight(true)
-      });
-    }).on('affixed.bs.affix', function (e) { // affixed
-      $(this).css({
-        top: -$affixSearch.height()
-      }).animate({
-        top: '0'
-      }, 500);;
-    }).on('affix-top.bs.affix', function (e) { // no longer affixed
-      $affixPlaceholder.css({ height: 0});
-    });
-          
-          
+//     $affixSearch.affix({
+//       offset: {
+//         top: topBreakPoint,
+//         bottom: function () {
+//           return (this.top = bottomBreakPoint);
+//         }
+//       }
+//     }).on('affix.bs.affix', function (e) { // in the process of affixing
+//       $affixPlaceholder.css({
+//         height: $affixSearch.outerHeight(true)
+//       });
+//     }).on('affixed.bs.affix', function (e) { // affixed
+//       $(this).css({
+//         top: -$affixSearch.height()
+//       }).animate({
+//         top: '0'
+//       }, 500);;
+//     }).on('affix-top.bs.affix', function (e) { // no longer affixed
+//       $affixPlaceholder.css({ height: 0});
+//     });   
   </script>
   
   <script type="text/javascript">
