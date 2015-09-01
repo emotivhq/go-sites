@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
   <script src="marvel/vendor/modernizr/modernizr.js"></script>
   <link href="http://bootstraptour.com/assets/css/bootstrap-tour.css" rel="stylesheet">
-	<style>.tour-tour .btn-sm {padding: 5px;}.tour-tour .btn-group .btn + .btn {margin-left: 8px;}</style>
+	<style>.tour-tour .btn-sm {padding: 5px;}.tour-tour .btn-group .btn + .btn {margin-left: 5px;}</style>
 
   <!--[if IE]>
 			<link rel="stylesheet" href="marvel/css/ie.css">
@@ -111,7 +111,7 @@
               <li class="dropdown megamenu">
                 <a data-target=".form-wrapper" data-toggle="modal" href="javascript:void(0);">Login</a>
               </li>
-              <li class="dropdown megamenu">
+              <li class="dropdown megamenu tour-info">
                 <a href="#">Get Started</a>
               </li>
             </ul>
@@ -2125,7 +2125,7 @@
 
 
 		
-		<section class="featured-foot">
+		<section class="featured-foot get-social">
 						<div class="container">
 							<div class="row row-fluid">
 								<div class="col-sm-6 contact-info-wrap equal-height bg-img-gift" style="padding: 55px 15px;">
@@ -3445,7 +3445,7 @@ var tour = new Tour({
   {
     element: ".logo",
     title: "Welcome to the GiftStarter A/B Experiment",
-    content: "If this is your first time here, follow this quick alk through",
+    content: "If this is your first time here, follow this quick walk through",
 	backdrop: true,
 	backdropContainer: 'body',
 	  placement: "bottom"
@@ -3468,7 +3468,7 @@ var tour = new Tour({
   },
   {
     element: ".nav-searchbar",
-    title: "Autocomplete search...sticky to the top",
+    title: "Autocomplete search...sticky to the top. Since we're having issues crawling our products, search is limited to content pages for now. Try <strong>social</strong>, <strong>team</strong>, or <strong>starts</strong> for a search example.",
     content: "This is badassery.",
 	backdrop: true,
 	backdropContainer: 'body',
@@ -3484,20 +3484,68 @@ var tour = new Tour({
   },
   {
     element: ".sidebar-left",
-    title: "Here is a super duper awesome sidebar.",
-    content: "This is some more, simple, badassery.",
+    title: "Handy Product sidebar.",
+    content: "This is a quick way to highlight more items",
 	backdrop: true,
 	backdropContainer: 'body',
 	  placement: "right"
   },
   {
     element: ".main-content-right",
-    title: "Here is a super duper awesome product viwer.",
-    content: "This is some more, simple, badassery.",
+    title: "Here is a super duper awesome product viewer.",
+    content: "All these things you can now do from the product listing...create gift campaign, open product, save for later, and more.",
 	backdrop: true,
 	backdropContainer: 'body',
 	  placement: "left"
-  }
+  },  
+  {
+    element: ".get-social",
+    title: "Getting People Connected",
+    content: "This intends to get people signed up and connecting with friends",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
+  {
+    element: ".top-tall",
+    title: "Carousel style product listings",
+    content: "Filter results by category (or whatever we decide to filter these by.)<br> Play around theese, they are fun!!",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
+  {
+    element: ".featured-note",
+    title: "Testimonials",
+    content: "We have to get some quotes in here...people love quotes. This section will probably get fancier.",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
+  {
+    element: ".parallax",
+    title: "Sign up CTA",
+    content: "Here's our chance to get the user who made this far to get right to it and sign up.",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
+  {
+    element: ".partners-wrap",
+    title: "The Logo Farm",
+    content: "People love logos, and here are a few of our own.",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
+  {
+    element: "#footer",
+    title: "A slightly updated footer.",
+    content: "This come with more readability, more room, and a couple of new niceties.",
+	backdrop: true,
+	backdropContainer: 'body',
+	placement: "top"  
+  },
 ]});
 
 // Initialize the tour
