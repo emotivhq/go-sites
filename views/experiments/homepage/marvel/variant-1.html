@@ -21,6 +21,8 @@
   <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
   <script src="marvel/vendor/modernizr/modernizr.js"></script>
+  <link href="http://bootstraptour.com/assets/css/bootstrap-tour.css" rel="stylesheet">
+	<style>.tour-tour .btn-sm {padding: 5px;}.tour-tour .btn-group .btn + .btn {margin-left: 8px;}</style>
 
   <!--[if IE]>
 			<link rel="stylesheet" href="marvel/css/ie.css">
@@ -689,7 +691,7 @@
     <section class="search-wrap clearfix" id="search-wrap">
       <div class="container">
         <div class="row row-fluid">
-          <div class="col-xs-1 col-sm-3 hidden-xs">
+          <div class="col-xs-1 col-sm-3 hidden-xs nav-search-menu-tour">
             <ul class="nav nav-pills nav-main-menu nav-search-menu">
               <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-bars"></i> <span class="hidden-xs">Browse Categories</span></a>
@@ -3380,7 +3382,7 @@
   -->
   <!-- Theme Base, Components and Settings -->
   <script src="marvel/js/theme.js"></script>
-  <script href="js/pace.min.js"></script>
+  <script src="http://bootstraptour.com/assets/js/bootstrap-tour.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
@@ -3435,6 +3437,75 @@
     })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
     _st('install', 'P4z2xaMrEECbs3-HgwR-', '2.0.0');
   </script>
+	
+  <script>
+// Load the tour locally, remove this after demo
+var tour = new Tour({
+  steps: [
+  {
+    element: ".logo",
+    title: "Welcome to the GiftStarter A/B Experiment",
+    content: "If this is your first time here, follow this quick alk through",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "bottom"
+  },
+  {
+    element: "#header",
+    title: "New Header & Nav",
+    content: "After a hundred hours of watching people use the site, this was the first big overhaul. From here, we can go anywhere in the site right away...with a focus on products and getting started.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "bottom"
+  },
+  {
+    element: ".nav-search-menu-tour",
+    title: "Navsearch Menu",
+    content: "This is badassery.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "bottom"
+  },
+  {
+    element: ".nav-searchbar",
+    title: "Autocomplete search...sticky to the top",
+    content: "This is badassery.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "bottom"
+  },
+  {
+    element: ".main-slides",
+    title: "Here is a super hero.",
+    content: "This is some more, simple, badassery.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "bottom"
+  },
+  {
+    element: ".sidebar-left",
+    title: "Here is a super duper awesome sidebar.",
+    content: "This is some more, simple, badassery.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "right"
+  },
+  {
+    element: ".main-content-right",
+    title: "Here is a super duper awesome product viwer.",
+    content: "This is some more, simple, badassery.",
+	backdrop: true,
+	backdropContainer: 'body',
+	  placement: "left"
+  }
+]});
+
+// Initialize the tour
+tour.init();
+
+// Start the tour
+tour.start(true);	
+  </script>	
 
 </body>
 
