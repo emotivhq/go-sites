@@ -407,14 +407,12 @@ gulp.task('marvel-vendor-js', ['clean-marvel-vendor-js'], function () {
 
 gulp.task('marvel-vendor-css', ['clean-marvel-vendor-css'], function () {
   return gulp.src([
-	'./src/themes/marvel/vendor/fontawesome/css/font-awesome.css',
 	'./src/themes/marvel/vendor/owlcarousel/owl.carousel.css',
 	'./src/themes/marvel/vendor/owlcarousel/owl.theme.css',
 	'./src/themes/marvel/vendor/owlcarousel/owl.transitions.css',
 	'./src/themes/marvel/vendor/flexslider/flexslider.css',
 	'./src/themes/marvel/vendor/chosen/chosen.css',
 	'./src/themes/marvel/vendor/magnific-popup/magnific-popup.css'
-
  ])
   // .pipe(debug())
   .pipe(concatCss("marvel.vendor.css")).pipe(rename({
