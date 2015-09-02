@@ -9612,6 +9612,13 @@ address {
   background-repeat: no-repeat;
 }
 
+/* added by joel for A/B test */
+.bg-img-gift {
+background-image: url(/marvel/images/slides/superhero-1.png);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+
 /* line 60, ../sass/theme/gui/_elements.scss */
 .bg-pattern-dark {
   background-image: url(../images/patterns/bg-pattern-dark.jpg);
@@ -10246,7 +10253,7 @@ textarea.form-control {
 
 /* line 1, ../sass/theme/gui/_sections.scss */
 .body {
-  background-color: whitesmoke;
+  background-color: white;
   overflow: hidden;
 }
 
