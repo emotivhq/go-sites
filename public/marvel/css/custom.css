@@ -91,14 +91,14 @@ md-autocomplete input:not(.md-input) {
   margin: 0 35px;
 }
 @media (min-width: 480px) {
-  .owl-carousel {
+  .owl-carousel.main-slides {
     opacity: 0;
     display: block;
     min-height: 388px;
   }
 }
 @media (min-width: 992px) {
-  .owl-carousel {
+  .owl-carousel.main-slides {
     opacity: 0;
     display: block;
     min-height: 620px;
