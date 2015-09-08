@@ -126,3 +126,6 @@ md-autocomplete input:not(.md-input) {
 .search-wrap.affix>.container {
   margin-bottom: 0;
 }
+.list-note .list-note-item:hover {
+  border-color: transparent;
+}
