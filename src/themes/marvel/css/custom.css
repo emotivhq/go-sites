@@ -43,6 +43,9 @@ input:focus {
   line-height: 1;
   width: 100%;
 }
+.nav-search-menu .dropdown>.dropdown-menu {
+  padding-bottom: 5px;
+}
 .btn-primary:hover {
   background-color: #d0311a;
   border-color: #d0311a;
