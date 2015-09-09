@@ -1,6 +1,6 @@
 {
   "name": "Variant-Ninja",
-  "version": "0.6.78",
+  "version": "0.6.79",
   "description": "The sexiest landing page app - ever.",
   "dependencies": {
     "bootstrap": "~3.0.3",
