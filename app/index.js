@@ -111,6 +111,16 @@ require('./routes.js')(app); // load our routes and pass in our app
 //var vhost = require('../vhost')(app, express, vhost, stormpath, favicon, path, logger, bodyParser, methodOverride, cookieParser); // load the vhost middlewares
 
 
+/*
+ * Load Swiftype API
+*/
+
+/* KISS. A keep it simple search API here... forever. 
+*/
+
+// swiftype API ======================================================================
+require('./swiftype.js')(app); // load Swiftype API middleware and pass in our app
+
 
 
 	/* Now that we've loaded everything... load server error handling */
