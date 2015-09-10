@@ -146,4 +146,27 @@ md-autocomplete input:not(.md-input) {
     height: 50px;
     line-height: 50px;
   }
+  .main-content {
+    padding-top: 0px;
+  }
+  .narrow-tabs>li>a {
+    font-size: 1.4em;
+    padding-right: 0;
+  }
+  .narrow-tabs>li+li>a:before {
+    content: '';
+    padding-right: 0;
+  }
+  .thumb-item-content h3 {
+    font-size: 1.5em;
+  }
+  .product-price {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  .partners-2 .list-partners li {
+    margin: 5px 35px;
+  }
 }
