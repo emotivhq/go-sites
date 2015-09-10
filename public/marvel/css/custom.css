@@ -138,7 +138,7 @@ md-autocomplete input:not(.md-input) {
 .bg-img-gift {
   background-image: url("/marvel/images/bg/social-bg.png");
 }
-@media (max-width: 991px) {
+@media (max-width: 480px) {
   .thumb-item-img .thumb-act-first {
     width: 50px;
   }
@@ -148,6 +148,9 @@ md-autocomplete input:not(.md-input) {
   }
   .main-content {
     padding-top: 0px;
+  }
+  .narrow-tabs>li {
+    float: none;
   }
   .narrow-tabs>li>a {
     font-size: 1.4em;
@@ -168,5 +171,11 @@ md-autocomplete input:not(.md-input) {
   }
   .partners-2 .list-partners li {
     margin: 5px 35px;
+  }
+  .nav-searchbar .btn-primary, .st-ui-search-input, .st-default-search-input {
+    height: 55px !important;
+    font-size: 16px !important;
+    line-height: 1em;
+    background-position: 8px 17px !important;
   }
 }
