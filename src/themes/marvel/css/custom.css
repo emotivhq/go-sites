@@ -133,13 +133,8 @@ md-autocomplete input:not(.md-input) {
   border-color: transparent;
 }
 .contact-info-wrap:after {
-  background-color: rgba(228, 64, 40, .8)
+  background-color: rgba(228, 64, 40, .85)
 }
-.contact-info-wrap a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.contact-info-wrap a:hover {
-  opacity: 0.9;
+.bg-img-gift {
+  background-image: url("/marvel/images/bg/social-bg.png");
 }
