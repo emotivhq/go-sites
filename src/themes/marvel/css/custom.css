@@ -138,3 +138,12 @@ md-autocomplete input:not(.md-input) {
 .bg-img-gift {
   background-image: url("/marvel/images/bg/social-bg.png");
 }
+@media (max-width: 991px) {
+  .thumb-item-img .thumb-act-first {
+    width: 50px;
+  }
+  .thumb-item-img .thumb-act-first a {
+    height: 50px;
+    line-height: 50px;
+  }
+}
