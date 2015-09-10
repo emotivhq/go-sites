@@ -132,3 +132,14 @@ md-autocomplete input:not(.md-input) {
 .list-note .list-note-item:hover {
   border-color: transparent;
 }
+.contact-info-wrap:after {
+  background-color: rgba(228, 64, 40, .8)
+}
+.contact-info-wrap a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contact-info-wrap a:hover {
+  opacity: 0.9;
+}
