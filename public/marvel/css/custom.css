@@ -129,6 +129,62 @@ md-autocomplete input:not(.md-input) {
 .search-wrap.affix>.container {
   margin-bottom: 0;
 }
-.list-note .list-note-item:hover {
+.featured-note .container {
+  padding-top: 75px;
+}
+.list-note .list-note-item, .list-note .list-note-item:hover {
   border-color: transparent;
+}
+.list-note .list-note-item img {
+    margin-right: 10px;
+}
+.contact-info-wrap:after {
+  background-color: rgba(228, 64, 40, .85)
+}
+.btn-social:hover {
+  opacity: .95;
+}
+.bg-img-gift {
+  background-image: url("/marvel/images/bg/social-bg.png");
+}
+@media (max-width: 480px) {
+  .thumb-item-img .thumb-act-first {
+    width: 50px;
+  }
+  .thumb-item-img .thumb-act-first a {
+    height: 50px;
+    line-height: 50px;
+  }
+  .main-content {
+    padding-top: 0px;
+  }
+  .narrow-tabs>li {
+    float: none;
+  }
+  .narrow-tabs>li>a {
+    font-size: 1.4em;
+    padding-right: 0;
+  }
+  .narrow-tabs>li+li>a:before {
+    content: '';
+    padding-right: 0;
+  }
+  .thumb-item-content h3 {
+    font-size: 1.5em;
+  }
+  .product-price {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: 1.4em;
+  }
+  .partners-2 .list-partners li {
+    margin: 5px 35px;
+  }
+  .nav-searchbar .btn-primary, .st-ui-search-input, .st-default-search-input {
+    height: 55px !important;
+    font-size: 16px !important;
+    line-height: 1em;
+    background-position: 8px 17px !important;
+  }
 }
