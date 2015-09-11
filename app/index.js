@@ -10,11 +10,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 //var stormpath = require('express-stormpath');
+var staticAsset = require('static-asset');
 
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+	res.set('Cache-Control', 'max-age=345600');
+    res.set('Expires', new Date(Date.now() + 345600000).toUTCString());
 
     // intercept OPTIONS method
     if ('OPTIONS' == req.method) {
@@ -32,6 +35,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(staticAsset(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(multer({
 	dest: __dirname + '/../views/', // this is where new pages are uploaded via Multer
