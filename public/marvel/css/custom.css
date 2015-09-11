@@ -141,6 +141,9 @@ md-autocomplete input:not(.md-input) {
 .contact-info-wrap:after {
   background-color: rgba(228, 64, 40, .85)
 }
+.btn-social:hover {
+  opacity: .95;
+}
 .bg-img-gift {
   background-image: url("/marvel/images/bg/social-bg.png");
 }
