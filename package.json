@@ -1,6 +1,6 @@
 {
   "name": "Variant-Ninja",
-  "version": "0.6.99",
+  "version": "0.6.100",
   "private": true,
   "description": "The sexiest landing page app - ever.",
   "engines": {
@@ -30,7 +30,6 @@
     "swiftype": "*",
     "vhost": "~3.0.0",
     "xtend": "~4.0.0"
-    "swiftype": "*"
   },
   "devDependencies": {
     "event-stream": "^3.1.7",
