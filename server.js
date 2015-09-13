@@ -1,10 +1,3 @@
-if(process.env.NODETIME_ACCOUNT_KEY) {
-  require('nodetime').profile({
-    accountKey: process.env.NODETIME_ACCOUNT_KEY,
-    appName: 'Variant Ninja' // optional
-  });
-}
-require('nodetime');
 require('newrelic');
 var cluster = require('cluster');
 var app = require('./app'); // this is the main app
