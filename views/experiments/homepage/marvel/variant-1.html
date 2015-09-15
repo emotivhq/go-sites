@@ -2,7 +2,6 @@
 <html>
 <!-- marvel #1 - homepage variant -->
 <head>
-  <script src="//cdn.optimizely.com/js/3400480911.js"></script>
   <meta charset="utf-8">
   <title>GiftStarter: GiftStarter, Group Gifting Starts Here</title>
   <meta name="keywords" content="really?" />
@@ -10,6 +9,8 @@
   <meta name="author" content="giftstarter.com">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="favicon.ico" />
+  <script src="//cdn.optimizely.com/js/3400480911.js"></script>
+  <script src="//load.sumome.com/" data-sumo-site-id="405509ff06e00d2745f35aa3824ee44664c233d67b35238b8a7ee141180907b5" async></script>
   <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600,700' type='text/css'>
   <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Roboto' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -1379,12 +1380,12 @@
               <div class="row row-fluid">
                 <div class="col-xs-9">
                   <div data-layout="column" class="autocompletedemoBasicUsage">
-                    <input type="search" class="st-default-search-input ng-isolate-scope" placeholder="What gift would you like to give?" autofocus>
+                    <input type="search" class="st-default-search-input ng-isolate-scope" placeholder="What gift would you like to give?" id="product-search-input" autofocus>
                   </div>
                 </div>
 
                 <div class="col-xs-3 col-md-2 pull-right">
-                  <button type="submit" class="btn btn-primary">Search</button>
+                  <button type="submit" class="btn btn-primary nav-searchbar-submit">Search</button>
                 </div>
               </div>
             </form>
@@ -2882,7 +2883,7 @@
   </script>
 
   <script type="text/javascript">
-    (function (w, d, t, u, n, s, e) {
+     (function (w, d, t, u, n, s, e) {
       w['SwiftypeObject'] = n;
       w[n] = w[n] || function () {
         (w[n].q = w[n].q || []).push(arguments);
@@ -2894,6 +2895,18 @@
       e.parentNode.insertBefore(s, e);
     })(window, document, 'script', '//s.swiftypecdn.com/install/v2/st.js', '_st');
     _st('install', 'P4z2xaMrEECbs3-HgwR-', '2.0.0');
+	 /* $(function() {
+        $(".nav-searchbar").submit(function() {
+            if ($("#product-search-input").val()) {
+             var searchterm = $("#product-search-input").val();
+             var searchurl = "https://www.giftstarter.com/search/"+searchterm+"/";
+				$(location).attr('href',searchurl);
+				//window.location.href=searchurl; 
+                //$(".nav-searchbar").submit();
+            }
+        });       
+    });
+	*/
   </script>
 
 </body>
