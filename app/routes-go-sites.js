@@ -17,5 +17,8 @@ module.exports = function(app) {
         res.renderDebug('experiments/homepage/marvel/variant-3.html');
     }); 
 	
-	
+    app.get('/500', function(req, res) {
+        res.renderDebug('500.html');
+    }); 
+		
 };
