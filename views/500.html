@@ -138,6 +138,11 @@
 		.ui.statistics .statistic > .value, .ui.statistic > .value {
 			    font-size: 2.5rem;
 		}
+		@media only screen and (min-width: 1200px) {
+			.ui.grid.container {
+    			width: calc( 1127px - 2rem ) !important;
+			}
+		}
         @media only screen and (max-width: 700px) {
             .ui.visible.left.sidebar ~ .fixed, .ui.visible.left.sidebar ~ .pusher {
                 max-width: 80% !important;
@@ -188,41 +193,43 @@
 
 <body>
 
-
-
     <!-- Sidebar Menu -->
     <div class="ui bottom attached segment pushable">
         <div class="ui inverted labeled icon left inline vertical sidebar menu visible">
-            <a class="item">
+            <a class="item" href="#fund">
                 <i class="ui green dollar icon"></i>
                 Raise
             </a>
-            <a class="ui blue item">
+            <a class="ui blue item" href="#metrics">
                 <i class="ui blue area chart layout icon"></i>
                 Metrics
             </a>
-            <a class="ui yellow item">
-                <i class="ui yellow smile icon"></i>
-                line chart
+            <a class="ui yellow item" href="#growth">
+                <i class="ui yellow map icon"></i>
+                Growth
             </a>
-            <a class="item">
+            <a class="item" href="#behavior">
                 <i class="ui teal users icon"></i>
                 Behavior
             </a>
-        </div>
+            <a class="item">
+                <img class="ui tiny image" src="https://www.giftstarter.com/assets/logo-mobile.png">
+            </a>
+		</div>
 
 
 
         <!-- Page Contents -->
         <div class="pusher">
 
-            <div class="ui vertical stripe segment">
+			
+			<div id="fund" class="ui vertical stripe segment">
                 <div class="ui middle aligned stackable grid container">
                     <div class="row">
-                        <div class="eight wide column">
-                            <h2 class="ui header" style="margin-bottom: 35px;">Fundraising</h2>
-                            <div class="ui three stackable cards">
-                                <div class="ui green card">
+                        <div class="sixteen wide column">
+                            <h2 class="ui header" style="margin-bottom: 35px;">Fundraising  <img class="ui middle aligned mini image" src="/img/1446196174_seed.png"></h2>
+                            <div class="ui four stackable cards">
+                                <a class="ui green card">
                                     <div class="content">
                                         <i class="right floated green dollar icon"></i>
                                         <div class="header">Raised To Date</div>
@@ -233,15 +240,47 @@
                                     <div class="ui center aligned extra content">
 										<div class="ui green statistic">
 										  <div class="value">
-											$480K
+											505K
 										  </div>
 										</div>
                                     </div>
-                                </div>
-                                <div class="ui green card">
+                                </a>
+                                <a class="ui green card">
                                     <div class="content">
                                         <i class="right floated green dollar icon"></i>
-                                        <div class="header">Current Round: Close Date</div>
+                                        <div class="header">Current Raise</div>
+                                        <div class="description">
+                                            <p>Seeking a <span class="ui basic label">Lead</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui green statistic">
+										  <div class="value">
+											500K
+										  </div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui green card">
+                                    <div class="content">
+                                        <i class="right floated green dollar icon"></i>
+                                        <div class="header">Soft Closed</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui green statistic">
+										  <div class="value">
+											700K
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                                <a class="ui green card">
+                                    <div class="content">
+                                        <i class="right floated green dollar icon"></i>
+                                        <div class="header">Close Date</div>
                                         <div class="description">
                                             <p></p>
                                         </div>
@@ -253,112 +292,353 @@
 										  </div>
 										</div>
                                     </div>
-                                </div>
-                                <div class="ui green card">
-                                    <div class="content">
-                                        <i class="right floated green dollar icon"></i>
-                                        <div class="header">Current Round: Fund Size</div>
-                                        <div class="description">
-                                            <p>3x With a Lead</p>
-                                        </div>
-                                    </div>
-                                    <div class="ui center aligned extra content">
-										<div class="ui green statistic">
-										  <div class="value">
-											$500K
-										  </div>
-										</div>
-                                    </div>
-                                </div>
-                                <div class="ui green card">
-                                    <div class="content">
-                                        <i class="right floated green dollar icon"></i>
-                                        <div class="header">Soft Closed</div>
-                                        <div class="description">
-                                            <p></p>
-                                        </div>
-                                    </div>
-                                    <div class="ui center aligned extra content">
-										<div class="ui green statistic">
-										  <div class="value">
-											$625K
-										  </div>
-										</div>
-                                    </div>
-                                </div>
-
-								
-								
+                                </a>
                             </div>
-                        </div>
-                        <div class="six wide right floated column">
-                            <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="center aligned column">
-                            <a class="ui huge button">Check Them Out</a>
                         </div>
                     </div>
                 </div>
             </div>
-
 
             <div class="ui vertical stripe quote segment">
                 <div class="ui equal width stackable internally celled grid">
                     <div class="center aligned row">
                         <div class="column">
-                            <h3>"What a Company"</h3>
-                            <p>That is what they all say about us</p>
-                        </div>
-                        <div class="column">
-                            <h3>"I shouldn't have gone with their competitor."</h3>
-                            <p>
-                                <img src="assets/images/avatar/nan.jpg" class="ui avatar image"> <b>Nan</b> Chief Fun Officer Acme Toys
-                            </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="ui vertical stripe segment">
-                <div class="ui text container">
-                    <h3 class="ui header">Breaking The Grid, Grabs Your Attention</h3>
-                    <p>Instead of focusing on content creation and hard work, we have learned how to master the art of doing nothing by providing massive amounts of whitespace and generic content that can seem massive, monolithic and worth your attention.</p>
-                    <a class="ui large button">Read More</a>
-                    <h4 class="ui horizontal header divider">
-        <a href="#">Case Studies</a>
-      </h4>
-                    <h3 class="ui header">Did We Tell You About Our Bananas?</h3>
-                    <p>Yes I know you probably disregarded the earlier boasts as non-sequitor filler content, but its really true. It took years of gene splicing and combinatory DNA research, but our bananas can really dance.</p>
-                    <a class="ui large button">I'm Still Quite Interested</a>
+			<div id="metrics" class="ui vertical stripe segment">
+                <div class="ui middle aligned stackable grid container">
+                    <div class="row">
+                        <div class="sixteen wide column">
+                            <h2 class="ui header" style="margin-bottom: 35px;">Metrics  <img class="ui middle aligned mini image" src="/img/1446197117_line_chart.png"></h2>
+                            <div class="ui four stackable cards">
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Revenue YTD</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											$55K
+										  </div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Net Margin</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											68%
+										  </div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Lifetime Value (LTV)</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											$182
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Avg Transaction Value</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											$44
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Avg Gift Size</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											$400
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                                <a class="ui blue card">
+                                    <div class="content">
+                                        <i class="right floated blue area chart icon"></i>
+                                        <div class="header">Repeat Gifts</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui blue statistic">
+										  <div class="value">
+											30%
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="ui vertical stripe quote segment">
+                <div class="ui equal width stackable internally celled grid">
+                    <div class="center aligned row">
+                        <div class="column">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-            <div class="ui inverted vertical footer segment">
+			<div id="growth" class="ui vertical stripe segment">
+                <div class="ui middle aligned stackable grid container">
+                    <div class="row">
+                        <div class="sixteen wide column">
+                            <h2 class="ui header" style="margin-bottom: 35px;">Growth <img class="ui middle aligned mini image" src="/img/1446199016_compass.png"></h2>
+                            <div class="ui four stackable cards">
+                                <a class="ui yellow card">
+                                    <div class="content">
+                                        <i class="right floated yellow map icon"></i>
+                                        <div class="header">Revenue Growth</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui yellow statistic horizontal">
+										  <div class="value">
+											75%
+										  </div>
+											<div class="label">
+    											MoM
+  											</div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui yellow card">
+                                    <div class="content">
+                                        <i class="right floated yellow map icon"></i>
+                                        <div class="header">Gift Campaign Growth</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui yellow statistic horizontal">
+										  <div class="value">
+											50%
+										  </div>
+											<div class="label">
+    											MoM
+  											</div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui yellow card">
+                                    <div class="content">
+                                        <i class="right floated yellow map icon"></i>
+                                        <div class="header">User Growth</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui yellow statistic horizontal">
+										  <div class="value">
+											25%
+										  </div>
+											<div class="label">
+    											MoM
+  											</div>
+										</div>
+                                    </div>
+                                </a>		
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+            <div class="ui vertical stripe quote segment">
+                <div class="ui equal width stackable internally celled grid">
+                    <div class="center aligned row">
+                        <div class="column">
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			<div id="behavior" class="ui vertical stripe segment">
+                <div class="ui middle aligned stackable grid container">
+                    <div class="row">
+                        <div class="sixteen wide column">
+                            <h2 class="ui header" style="margin-bottom: 35px;">Behavior  <img class="ui middle aligned mini image" src="/img/1446200098_connect_users_internet_online_web.png"></h2>
+                            <div class="ui four stackable cards">
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Active Users</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											3300
+										  </div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Paying Customers</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											1620
+										  </div>
+										</div>
+                                    </div>
+                                </a>
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Paid Traffic</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											53%
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Referral Traffic</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											15%
+										  </div>
+										</div>
+                                    </div>
+                                </a>                            
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Pages Per Visit</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											4.4
+										  </div>
+										</div>
+                                    </div>
+                                </a>                            
+							    <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal users icon"></i>
+                                        <div class="header">Avg Time On Site</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic horizontal">
+										  <div class="value">
+											1.5m
+										  </div>
+										</div>
+                                    </div>
+                                </a>                            
+                                <a class="ui teal card">
+                                    <div class="content">
+                                        <i class="right floated teal area chart icon"></i>
+                                        <div class="header">Retention</div>
+                                        <div class="description">
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                    <div class="ui center aligned extra content">
+										<div class="ui teal statistic">
+										  <div class="value">
+											16%
+										  </div>
+										</div>
+                                    </div>
+                                </a>		
+							
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="ui inverted vertical footer segment">
                 <div class="ui container">
                     <div class="ui stackable inverted divided equal height stackable grid">
                         <div class="three wide column">
                             <h4 class="ui inverted header">About</h4>
                             <div class="ui inverted link list">
-                                <a href="#" class="item">Sitemap</a>
-                                <a href="#" class="item">Contact Us</a>
-                                <a href="#" class="item">Religious Ceremonies</a>
-                                <a href="#" class="item">Gazebo Plans</a>
+                                <a href="#" class="item">Contact</a>
                             </div>
                         </div>
-                        <div class="three wide column">
-                            <h4 class="ui inverted header">Services</h4>
-                            <div class="ui inverted link list">
-                                <a href="#" class="item">Banana Pre-Order</a>
-                                <a href="#" class="item">DNA FAQ</a>
-                                <a href="#" class="item">How To Access</a>
-                                <a href="#" class="item">Favorite X-Men</a>
-                            </div>
-                        </div>
-                        <div class="seven wide column">
-                            <h4 class="ui inverted header">Footer Header</h4>
+                        <div class="thirteen wide column">
+                            <h4 class="ui inverted header">Footer graphic here</h4>
                             <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
                         </div>
                     </div>
