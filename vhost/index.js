@@ -12,7 +12,7 @@ module.exports = function(app, express, vhost, stormpath, favicon, path, logger,
 */
 
 // create vhost ======================================================================
-function createVirtualHost(domainName, dirPath) {
+function createVirtualHost(domainName, dirPath, routeFile) {
     var vhost = express();
 	// set up the express vhost application
 	// vhost.use(favicon(__dirname + '/../public/' + dirPath + '/favicon.ico'));
@@ -24,9 +24,9 @@ function createVirtualHost(domainName, dirPath) {
 	vhost.use(cookieParser());
 	vhost.use(express.static(path.join(__dirname, 'public')));
 	vhost.set('views', __dirname + '/../views/' + dirPath); // load views
-	require('./' + dirPath + '.js')(app, stormpath); // load routes
+	require('./' + routeFile + '.js')(app, stormpath); // load routes
 
-    return vhost(domainName, vhost)
+    return vhost(domainName, vhost);
 	
 }
 
@@ -36,14 +36,21 @@ function createVirtualHost(domainName, dirPath) {
 	
 	
 // Create the vhosts ======================================================================
-var variantHost = createVirtualHost("go.giftstarter.com", "variant");
-
+var variantHost = createVirtualHost("go.giftstarter.com", "variant", "variant");
+var emotivTryHost = createVirtualHost("try.emotiv.io", "emotiv/try", "emotiv");
+var emotivInvestHost = createVirtualHost("invest.emotiv.io", "emotiv/invest", "emotiv");
+var emotivHost = createVirtualHost("emotiv.io", "emotiv", "emotiv");
+var emotivWwwHost = createVirtualHost("www.emotiv.io", "emotiv", "emotiv");
 	
 
 
 	
 // Use the vhosts ======================================================================
 app.use(variantHost);
+app.use(emotivTryHost);
+app.use(emotivInvestHost);
+app.use(emotivHost);
+app.use(emotivWwwHost);
 
 
 

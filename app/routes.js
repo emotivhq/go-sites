@@ -4,7 +4,7 @@ module.exports = function(app, stormpath) {
     // HOME PAGE (with login links) ========
     // =====================================
     app.get('/', function(req, res) {
-        res.render('index.html'); // load the index.ejs file
+        res.render('emotiv/index.html'); // load the index.ejs file
     });
 
 	// Serve builder.html in /build

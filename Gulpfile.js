@@ -503,7 +503,7 @@ gulp.task('clean', [
  'clean-font',
  'clean-builder-font'
 ]);
-gulp.task('default', function (cb) {
+gulp.task('build', function (cb) {
   runSequence([
  //			'jshint',
    'builder-js',
@@ -541,21 +541,26 @@ gulp.task('marvel', function (cb) {
 gulp.task('connect', function () {
   connect.server({
     root: 'server.js',
-    port: 9601,
+    port: 8080,
     livereload: true
   });
 });
 gulp.task('html', function () {
-  gulp.src('./views/experiments/homepage/**/*.html').pipe(connect.reload());
+  gulp.src('./views/index.html').pipe(connect.reload());
+  gulp.src('./views/emotiv/**/*.html').pipe(connect.reload());
 });
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch(['./views/experiments/homepage/**/*.html'], ['html']);
-  gulp.watch(['./src/themes/marvel/css/*.css'], ['css']);
-  gulp.watch(['./src/themes/marvel/vendor/**/*.css'], ['css']);
-  gulp.watch(['./src/themes/marvel/vendor/**/**/*.css'], ['css']);
-  //gulp.watch(['public/src/themes/marvel/js/*.js'], ['js']);
-  //gulp.watch(['Gulpfile.js'], ['js']);
+  //gulp.watch(['./views/experiments/homepage/**/*.html'], ['html']);
+  //gulp.watch(['./src/themes/marvel/css/*.css'], ['css']);
+  //gulp.watch(['./src/themes/marvel/vendor/**/*.css'], ['css']);
+  //gulp.watch(['./src/themes/marvel/vendor/**/**/*.css'], ['css']);
+  gulp.watch(['./views/index.html'], ['html']);
+  gulp.watch(['./views/emotiv/**/*.html'], ['html']);
+  gulp.watch(['./public/js/*.js'], ['js']);
+  gulp.watch(['./public/css/*.css'], ['css']);
+  gulp.watch(['./public/img/*.js'], ['js']);
+  gulp.watch(['./Gulpfile.js'], ['js']);
 });
 
 function bumpTask(importance) {
