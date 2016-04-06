@@ -34,12 +34,8 @@ module.exports = function(app) {
         res.renderDebug('experiments/homepage/marvel/variant-1.html');
     });    
 	
-    app.get('/welcome', function(req, res) {
-        res.renderDebug('experiments/homepage/marvel/variant-2.html');
-    });    
-
     app.get('/main', function(req, res) {
-        res.renderDebug('experiments/homepage/marvel/variant-3.html');
+        res.renderDebug('giftstarter/index.html');
     }); 
 	
     app.get('/500', function(req, res) {
