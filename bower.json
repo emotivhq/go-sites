@@ -1,6 +1,6 @@
 {
   "name": "Variant-Ninja",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "The sexiest landing page app - ever.",
   "dependencies": {
     "bootstrap": "~3.0.3",
@@ -15,9 +15,9 @@
     "jsondiffpatch": "https://github.com/BeardandFedora/jsondiffpatch.git",
     "Context.js": "*",
     "pace": "~1.0.2",
-    "angular-material": "~0.10.1",
-    "angular-route": "~1.4.4",
-    "angular-messages": "~1.4.4"
+    "angular-material": "*",
+    "angular-route": "*",
+    "angular-messages": "*"
   },
   "main": [
     "/public/js/variant.min.js"
