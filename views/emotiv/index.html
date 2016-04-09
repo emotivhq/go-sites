@@ -7,96 +7,7 @@
 	<!-- include head & reveal slide partials -->
 	<% include ./partials/head-stealth %>
 	<% include ./partials/slides/styles %>
-
-<style>
-	nav.overlay.dark .navbar, nav.overlay.fixed.dark .navbar, .nav-container.dark {
-		background: #1b3322;
-		background: rgba(27,51,34, 0);
-		border: none;
-		box-shadow: none;
-	}
-	nav.overlay.fixed.shrink.dark .navbar, .nav-container.dark {
-		background: #1b3322;
-		background: rgba(27,51,34,.8);
-	}
-	.bg-dark.color.gradient:before, .bg-dark.gradient:before, .contact-3:before, .contact-3 form:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		opacity: 1;
-	}
-	.bg-dark.gradient:before {
-		background-color: #333;
-		background-image: -webkit-gradient(linear, right top, left bottom, from(#444), to(#222));
-		background-image: -webkit-linear-gradient(right top, #444, #222);
-		background-image: -moz-linear-gradient(bottom left, #444, #222);
-		background-image: -o-linear-gradient(bottom left, #444, #222);
-		background-image: linear-gradient(to bottom right, #444, #222);
-	}
-	.bg-dark.color.gradient:before {
-		background-color: #498c5c;
-		background-image: -webkit-gradient(linear, left top, right bottom, from(#498c5c), to(#105376));
-		background-image: -webkit-linear-gradient(left top, #498c5c, #105376);
-		background-image: -moz-linear-gradient(bottom right, #498c5c, #105376);
-		background-image: -o-linear-gradient(bottom right, #498c5c, #105376);
-		background-image: linear-gradient(to bottom right, #498c5c, #105376);
-	}
-	h2.gradient {
-		background: -webkit-linear-gradient(left top, #498c5c, #105376);
-	    background: linear-gradient(90deg, #498c5c, #105376);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		font-weight: 400;
-		font-size: 3em;
-	}
-	.contact-3:before {
-		opacity: .35;
-		background-image: url('/img/stealth-sphere.png');
-		background-repeat: no-repeat;
-    	background-position: center 70%;
-    	-ms-background-size: contain;
-    	-o-background-size: contain;
-    	-moz-background-size: contain;
-    	-webkit-background-size: contain;
-    	background-size: contain;
-	}
-	.contact-3.bg-secondary form {
-		background: transparent;
-		border: 1px solid #eee;
-		margin-top: 60px;
-	}
-	.contact-3 form:before {
-    	background-color: #fff;
-    	opacity: .4;
-	}
-	.contact-3 form input[type="text"] {
-		width: 100%;
-	}
-	.contact-3 form input[type="text"], .contact-3 form input[type="submit"], .contact-3 form p {
-		position: relative;
-	}
-	.footer-1 {
-		padding: 0 0 40px;
-	}
-	.features-1 {
-		padding: 75px 0;
-	}
-	.features-14 h4 {
-		margin-bottom: 10px;
-	}
-	.features-14 a {
-		margin-bottom: 10px;
-	}
-	.features-14 .hint {
-		opacity: .03;
-	}
-	.hover-gallery img {
-		max-width: 450px;
-	}
-</style>
+	<% include ./partials/styles-stealth %>
 
 </head>
 
@@ -114,7 +25,7 @@
 		            <div class="col-md-6 col-sm-6">
 		                <h4>We've solved the problem.</h4>
 		                <p class="lead">Curious? We would be to. Here's a hint* we've made it easy to <code>hipster ipsum record player</code>.</p>
-		                <a class="btn btn-filled super-action inner-link" target="default" href="#get-steathly">Break Stealth Mode</a>
+		                <a class="btn btn-filled super-action inner-link" target="default" href="#get-steathly">Unlock Stealth Mode</a>
 		                <p class="hint">
 		                	<small>
 		                		<em>*Folks love that we've increased average purchase value<br/>and decreased checkout abandonment.</em>
@@ -122,7 +33,11 @@
 		                </p>
 		            </div>
 		            <div class="col-md-6 col-sm-6">
+<<<<<<< HEAD
 		                <img alt="Cinema Display" src="/img/stack-in-phone.png">
+=======
+		                <img alt="Emotiv" src="/img/stack-in-ipad.png">
+>>>>>>> 95770e722dd8bb1a73c69e80a397c2fac31d2c0e
 		            </div>
 		        </div>
 		    </div>
@@ -141,17 +56,21 @@
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-sm-12 text-center">
-		                <h3>Juice Your Machine</h3>
+		                <h3>Unlock Stealth Mode</h3>
 		            </div>
 		        </div>
 		        <div class="row">
 		            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
-		                <form class="form-email" method="post">
-		                    <input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
+		            	<form class="contained-form form-email" method="post">
+		            		<input type="text" name="fname" class="validate-required signup-name-field " placeholder="First Name">
+		            		<input type="text" name="lname" class="validate-required signup-name-field " placeholder="Last Name">
 		                    <input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
-		                    <input type="submit" value="Submit">
-		                    <p class="sub">   <i>
-		                        * We won’t share your personal info with anyone. Duh.</i></p>
+		                    <input type="submit" value="Do It!">
+		                    <p class="sub">
+		                    	<em>
+		                        * We won’t share your personal info with anyone. Duh.
+		                        </em>
+		                    </p>
 		                    <div class="form-error">
 		                        <span>Please fill name and email out correctly.</span>
 		                    </div>
@@ -159,7 +78,7 @@
 		                    <div class="form-success">
 		                        <span>Thanks you for signing up. Your details were sent to us.</span>
 		                    </div>
-		                    <iframe srcdoc="" class="mail-list-form">
+		                    <iframe srcdoc="<!-- Begin MailChimp Signup Form --> <div id=&quot;mc_embed_signup&quot;> <form action=&quot;//giftstarter.us8.list-manage.com/subscribe/post?u=9d503578c402cdc6d3fa96dd7&amp;amp;id=5821b0f1b7&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>     <div id=&quot;mc_embed_signup_scroll&quot;> 	<h2>Subscribe to our mailing list</h2> <div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span> </label> 	<input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-FNAME&quot;>First Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-LNAME&quot;>Last Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;> </div> 	<div id=&quot;mce-responses&quot; class=&quot;clear&quot;> 		<div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div> 		<div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div> 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->     <div style=&quot;position: absolute; left: -5000px;&quot; aria-hidden=&quot;true&quot;><input type=&quot;text&quot; name=&quot;b_9d503578c402cdc6d3fa96dd7_5821b0f1b7&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>     <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>     </div> </form> </div>  <!--End mc_embed_signup-->" class="mail-list-form">
 		                    </iframe>
 		                </form>
 		            </div>
