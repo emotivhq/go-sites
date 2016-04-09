@@ -6,23 +6,23 @@ module.exports = function(app) {
 	// Repo: https://github.com/giftstarter/go-sites/src/themes/marvel
 	// ====================================
 
-    app.get('/stealth', function(req, res) {
-        res.renderDebug('emotiv/stealth/index.html');
+    app.get('/hipster-ipsum-record-player', function(req, res) {
+        res.renderDebug('emotiv/stealth-deck.html');
     });    
 	
-    app.get('/evite', function(req, res) {
+    app.get('/evite-is-hipster-ipsum', function(req, res) {
         res.renderDebug('emotiv/try/evite.html');
     });    
 	
-    app.get('/deck', function(req, res) {
+    app.get('/investors-are-hipster-ipsum', function(req, res) {
         res.renderDebug('emotiv/invest/index.html');
     });    
 
-    app.get('/stack', function(req, res) {
+    app.get('/the-last-mile-is-hipster-ipsum', function(req, res) {
         res.renderDebug('emotiv/stack/index.html');
     });    
 
-    app.get('/500', function(req, res) {
+    app.get('/500-family-is-hipster-ipsum', function(req, res) {
         res.renderDebug('emotiv/500.html');
     }); 
 		
@@ -32,7 +32,7 @@ module.exports = function(app) {
 	// Repo: https://github.com/giftstarter/go-sites/src/themes/marvel
 	// ====================================
 	
-    app.get('/gifting', function(req, res) {
+    app.get('/giving', function(req, res) {
         res.renderDebug('giftstarter/index.html');
     }); 
 	
