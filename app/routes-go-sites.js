@@ -5,12 +5,9 @@ module.exports = function(app) {
 	// Serve custom Emotiv homepage being hosted here
 	// Repo: https://github.com/giftstarter/go-sites/src/themes/marvel
 	// ====================================
-    app.get('/', function(req, res) {
-        res.renderDebug('emotiv/index.html');
-    }); 
 
-    app.get('/try', function(req, res) {
-        res.renderDebug('emotiv/try/index.html');
+    app.get('/stealth', function(req, res) {
+        res.renderDebug('emotiv/stealth/index.html');
     });    
 	
     app.get('/evite', function(req, res) {
@@ -21,24 +18,23 @@ module.exports = function(app) {
         res.renderDebug('emotiv/invest/index.html');
     });    
 
+    app.get('/stack', function(req, res) {
+        res.renderDebug('emotiv/stack/index.html');
+    });    
+
     app.get('/500', function(req, res) {
         res.renderDebug('emotiv/500.html');
     }); 
 		
 		
 	// ====================================
-	// Serve custom giftstarter go-sites homepage variants being hosted here
+	// Serve custom go-sites homepage variants being hosted here
 	// Repo: https://github.com/giftstarter/go-sites/src/themes/marvel
 	// ====================================
-    app.get('/home', function(req, res) {
-        res.renderDebug('experiments/homepage/marvel/variant-1.html');
-    });    
 	
-    app.get('/main', function(req, res) {
+    app.get('/gifting', function(req, res) {
         res.renderDebug('giftstarter/index.html');
     }); 
 	
-    app.get('/500', function(req, res) {
-    }); 
 		
 };
