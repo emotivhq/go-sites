@@ -123,7 +123,7 @@ require('./routes.js')(app); // load our routes and pass in our app
 */
 
 // swiftype API ======================================================================
-require('./swiftype.js')(app); // load Swiftype API middleware and pass in our app
+//require('./swiftype.js')(app); // load Swiftype API middleware and pass in our app
 
 
 

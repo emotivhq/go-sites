@@ -58,15 +58,6 @@ module.exports = function(app, stormpath) {
         res.renderDebug('terms.html');
     });
 	
-	
-	// ====================================
-	// Serve custom pages being hosted here
-	// ====================================
-    app.get('/the-page', function(req, res) {
-        res.renderDebug('the-page.html');
-    });    
-	
-	
 
     // route middleware to make sure a user is logged in
 
