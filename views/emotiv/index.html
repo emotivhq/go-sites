@@ -2,151 +2,189 @@
 <html lang="en">
 <head>
 	<title>Welcome to Emotiv</title>
-	<meta name="description" content="Collaborative payments made easy.">	
+	<meta name="description" content="Multiple People. Any Currency. One Transaction.">
 	
 	<!-- include head & reveal slide partials -->
-	<% include ./partials/head %>
+	<% include ./partials/head-stealth %>
 	<% include ./partials/slides/styles %>
+
+<!--
+ _____    _____   _____    _____    _        _____   _   _
+/\  ___\ /\__  _\/\  ___\ /\  __ \ /\ \     /\__  _\/\ \_\ \   
+\ \___  \\/_/\ \/\ \  __\ \ \  __ \\ \ \____\/_/\ \/\ \  __ \  
+ \/\_____\  \ \_\ \ \_____\\ \_\ \_\\ \_____\  \ \_\ \ \_\ \_\ 
+  \/_____/   \/_/  \/_____/ \/_/\/_/ \/_____/   \/_/  \/_/\/_/
+ __    __     ______     _____     ______    
+/\ "-./  \   /\  __ \   /\  __-.  /\  ___\   
+\ \ \-./\ \  \ \ \/\ \  \ \ \/\ \ \ \  __\   
+ \ \_\ \ \_\  \ \_____\  \ \____-  \ \_____\ 
+  \/_/  \/_/   \/_____/   \/____/   \/_____/ 
+                                            
+-->
+
+<style>
+	nav.overlay.dark .navbar, nav.overlay.fixed.dark .navbar, .nav-container.dark {
+		background: #1b3322;
+		background: rgba(27,51,34, 0);
+		border: none;
+		box-shadow: none;
+	}
+	nav.overlay.fixed.shrink.dark .navbar, .nav-container.dark {
+		background: #1b3322;
+		background: rgba(27,51,34,.8);
+	}
+	.bg-dark.color.gradient:before, .bg-dark.gradient:before, .contact-3:before, .contact-3 form:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 1;
+	}
+	.bg-dark.gradient:before {
+		background-color: #333;
+		background-image: -webkit-gradient(linear, right top, left bottom, from(#444), to(#222));
+		background-image: -webkit-linear-gradient(right top, #444, #222);
+		background-image: -moz-linear-gradient(bottom left, #444, #222);
+		background-image: -o-linear-gradient(bottom left, #444, #222);
+		background-image: linear-gradient(to bottom right, #444, #222);
+	}
+	.bg-dark.color.gradient:before {
+		background-color: #498c5c;
+		background-image: -webkit-gradient(linear, left top, right bottom, from(#498c5c), to(#105376));
+		background-image: -webkit-linear-gradient(left top, #498c5c, #105376);
+		background-image: -moz-linear-gradient(bottom right, #498c5c, #105376);
+		background-image: -o-linear-gradient(bottom right, #498c5c, #105376);
+		background-image: linear-gradient(to bottom right, #498c5c, #105376);
+	}
+	h2.gradient {
+		background: -webkit-linear-gradient(left top, #498c5c, #105376);
+	    background: linear-gradient(90deg, #498c5c, #105376);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 400;
+		font-size: 3em;
+	}
+	.contact-3:before {
+		opacity: .35;
+		background-image: url('/img/stealth-sphere.png');
+		background-repeat: no-repeat;
+    	background-position: center 70%;
+    	-ms-background-size: contain;
+    	-o-background-size: contain;
+    	-moz-background-size: contain;
+    	-webkit-background-size: contain;
+    	background-size: contain;
+	}
+	.contact-3.bg-secondary form {
+		background: transparent;
+		border: 1px solid #eee;
+		margin-top: 60px;
+	}
+	.contact-3 form:before {
+    	background-color: #fff;
+    	opacity: .4;
+	}
+	.contact-3 form input[type="text"] {
+		width: 100%;
+	}
+	.contact-3 form input[type="text"], .contact-3 form input[type="submit"], .contact-3 form p {
+		position: relative;
+	}
+	.footer-1 {
+		padding: 0 0 40px;
+	}
+	.features-1 {
+		padding: 75px 0;
+	}
+	.features-14 h4 {
+		margin-bottom: 10px;
+	}
+	.features-14 a {
+		margin-bottom: 10px;
+	}
+	.features-14 .hint {
+		opacity: .03;
+	}
+	.hover-gallery img {
+		max-width: 450px;
+	}
+</style>
 
 </head>
 
 <body>
 
-	<!-- include navbar partial -->
-	<% include ./partials/navbar %>
+	<!-- include navbar partial for stealth -->
+	<% include ./partials/navbar-stealth %>
 		        
 	<div class="main-container">
 
 		<!-- START: VARIANT GENERATED & CUSTOM HTML  -->
-		<section class="header header-2">
-		
-		                <div class="background-image-holder">
-		                    <img alt="Background Image" class="background-image" src="/img/hero16.jpg">
-		                </div>
-		
-		                <div class="container">
-		                    <div class="row">
-		                        <div class="col-sm-12 text-center">
-		                            <h1 class="text-white">Great&nbsp;<em>Payments</em>&nbsp;start here.</h1>
-		                            <h5>With Emotiv you can pay for things, with a smile. Make your lists. Find your community. Buy things together.</h5>
-		                        </div>
+		<section class="features features-14 bg-dark color gradient">
+		    <div class="container">
+		        <div class="row v-align-children">
+		            <div class="col-md-6 col-sm-6">
+		                <h4>We've solved the problem.</h4>
+		                <p class="lead">Curious? We would be to. Here's a hint* we've made it easy to <code>hipster ipsum record player</code>.</p>
+		                <a class="btn btn-filled super-action inner-link" target="default" href="#get-steathly">Break Stealth Mode</a>
+		                <p class="hint">
+		                	<small>
+		                		<em>*Folks love that we've increased average purchase value<br/>and decreased checkout abandonment.</em>
+		                	</small>
+		                </p>
+		            </div>
+		            <div class="col-md-6 col-sm-6">
+		                <img alt="Cinema Display" src="/img/smart-stack-ipad.png">
+		            </div>
+		        </div>
+		    </div>
+		</section>
+		<section class="features features-1 bg-dark gradient">
+		    <div class="container">
+		    	<div class="row">
+		            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 text-center">
+		                <h2 class="gradient">Multiple People. Any Currency. One Transaction.</h2>
+		                <!--<p class="lead"><span><i>Sell your&nbsp;products to multiple people&nbsp;from&nbsp;<br>multiple countries all&nbsp;through one seamless transaction.</i></span><br></p>-->
+		            </div>
+		        </div>
+		    </div>
+		</section>
+		<section id="get-steathly" class="contact contact-3 bg-secondary">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-sm-12 text-center">
+		                <h3>Juice The Machine</h3>
+		            </div>
+		        </div>
+		        <div class="row">
+		            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+		                <form class="form-email" method="post">
+		                    <input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
+		                    <input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
+		                    <input type="submit" value="Submit">
+		                    <p class="sub">   <i>
+		                        * We won’t share your personal info with anyone. Duh.</i></p>
+		                    <div class="form-error">
+		                        <span>Please fill name and email out correctly.</span>
 		                    </div>
 		
-		                    <div class="row">
-		                        <div class="col-sm-12 text-center">
-		                            <div class="embed-video-container">
-		                                <iframe src="https://www.youtube-nocookie.com/embed/AKk6Po6csM0?rel=0&amp;controls=0&amp;showinfo=0"></iframe>
-		                            </div>
-		                        </div>
+		                    <div class="form-success">
+		                        <span>Thanks you for signing up. Your details were sent to us.</span>
 		                    </div>
-		
-		                    <div class="row">
-		                        <div class="col-sm-12 text-center">
-		                            <form class="contained-form form-email" method="post">
-		                                <h6 class="text-white">You know you want to know more</h6>
-		                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
-		                                <input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
-		                                <input type="submit" value="Get Started Now»">
-		                                <p class="sub">
-		                                    * We don’t share your personal info with anyone. Check out our <a href="https://www.giftstarter.com/privacy" target="_blank"> Privacy Policy</a> for more information.
-		                                </p>
-		                                <div class="form-error">
-		                                    <span>Please fill all fields correctly</span>
-		                                </div>
-		
-		                                <div class="form-success">
-		                                    <span>Thanks, your details were sent</span>
-		                                </div>
-		                                <iframe srcdoc="<!-- Begin MailChimp Signup Form --> <link href=&quot;//cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;> <style type=&quot;text/css&quot;> 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; } 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block. 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ </style> <div id=&quot;mc_embed_signup&quot;> <form action=&quot;//giftstarter.us8.list-manage.com/subscribe/post?u=9d503578c402cdc6d3fa96dd7&amp;amp;id=c0f44e11c0&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>     <div id=&quot;mc_embed_signup_scroll&quot;> 	<h2>Subscribe to our mailing list</h2> <div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span> </label> 	<input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-FNAME&quot;>First Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-LNAME&quot;>Last Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;> </div> 	<div id=&quot;mce-responses&quot; class=&quot;clear&quot;> 		<div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div> 		<div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div> 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->     <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_9d503578c402cdc6d3fa96dd7_c0f44e11c0&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>     <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>     </div> </form> </div> <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script> <!--End mc_embed_signup-->" class="mail-list-form">
-		                                </iframe>
-		                            </form>
-		                        </div>
-		                    </div>
-		                </div>
-		            </section>
-		<section class="features features-3 bg-secondary">
-		                <div class="container">
-		                    <div class="row">
-		                        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-		                            
-		                            
-		                            <!-- include reveal.js partials -->
-									<% include ./partials/slides/slides %>
-									
-									
-		                        </div>
-		                    </div>
-						</div>
-					</section>
-		<section class="features features-3 bg-secondary">
-		                <div class="container">
-		                    <div class="row">
-		                        <div class="col-md-10 col-md-offset-1 col-sm-12 text-center">
-		                            <h3>Emotiv is the universal payment platform with the sole mission of making payments easy and meaningful.</h3>
-		                            <p>Any product available online can be split into pieces and payments shared with friends.</p>
-		                        </div>
-		                    </div>
-		
-		                    <div class="row">
-		                        <div class="col-sm-4 text-center feature">
-		                            <i class="fa fa-gift"></i>
-		                            <h5>How It Works</h5>
-		                            <p>
-		                                EMotiv is the place for payment fun. We like ot write sentences here and leave the so other can read them.
-		                            </p>
-		                        </div>
-		
-		                        <div class="col-sm-4 text-center feature">
-		                            <i class="fa fa-users"></i>
-		                            <h5>Bringing People Together</h5>
-		                            <p>
-		                                Emotiv is the best way to bring family and friends together to give an amazing gift. You start it -- and we help you with the rest.
-		                            </p>
-		                        </div>
-		
-		                        <div class="col-sm-4 text-center feature">
-		                            <i class="icon-clock"></i>
-		                            <h5>Easy As 1-2-3</h5>
-		                            <p>
-		                                When you use Emotiv, you don't have to collect the money or chase people down for cash. It only takes a couple minutes to launch a campaign.
-		                            </p>
-		                        </div>
-		                    </div>
-		                </div>
-		            </section>
-		<section class="cta cta-2" id="lets-gift">
-		                <div class="container">
-		                    <div class="row">
-		                        <div class="col-sm-12 text-center">
-		                            <h3>Start today and pay zero fees</h3>
-		                            <h5>Enjoy your first payment on Emtiv with no obligation - That means <b>zero</b> fees!</h5>
-		                            <form class="contained-form form-email" method="post">
-		                                <h6>Sign up To Get Your Free Promo Code</h6>
-		                                <input type="text" name="name" class="signup-name-field validate-required" placeholder="Your Name">
-		                                <input type="text" name="email" class="validate-required validate-email signup-email-field" placeholder="Email Address">
-		                                <input type="submit" value="Get Started Now »">
-		                                <p class="sub">
-		                                    * We don’t share your personal info with anyone. Check out our <a href="https://www.giftstarter.com/privacy" target="_blank"> Privacy Policy</a> for more information.
-		                                </p>
-		                                <div class="form-error">
-		                                    <span>Please fill all fields correctly</span>
-		                                </div>
-		
-		                                <div class="form-success">
-		                                    <span>Thanks, your details were sent</span>
-		                                </div>
-		                                <iframe srcdoc="<!-- Begin MailChimp Signup Form --> <link href=&quot;//cdn-images.mailchimp.com/embedcode/classic-081711.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;> <style type=&quot;text/css&quot;> 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; } 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block. 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */ </style> <div id=&quot;mc_embed_signup&quot;> <form action=&quot;//giftstarter.us8.list-manage.com/subscribe/post?u=9d503578c402cdc6d3fa96dd7&amp;amp;id=c0f44e11c0&quot; method=&quot;post&quot; id=&quot;mc-embedded-subscribe-form&quot; name=&quot;mc-embedded-subscribe-form&quot; class=&quot;validate&quot; target=&quot;_blank&quot; novalidate>     <div id=&quot;mc_embed_signup_scroll&quot;> 	<h2>Subscribe to our mailing list</h2> <div class=&quot;indicates-required&quot;><span class=&quot;asterisk&quot;>*</span> indicates required</div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-EMAIL&quot;>Email Address  <span class=&quot;asterisk&quot;>*</span> </label> 	<input type=&quot;email&quot; value=&quot;&quot; name=&quot;EMAIL&quot; class=&quot;required email&quot; id=&quot;mce-EMAIL&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-FNAME&quot;>First Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;FNAME&quot; class=&quot;&quot; id=&quot;mce-FNAME&quot;> </div> <div class=&quot;mc-field-group&quot;> 	<label for=&quot;mce-LNAME&quot;>Last Name </label> 	<input type=&quot;text&quot; value=&quot;&quot; name=&quot;LNAME&quot; class=&quot;&quot; id=&quot;mce-LNAME&quot;> </div> 	<div id=&quot;mce-responses&quot; class=&quot;clear&quot;> 		<div class=&quot;response&quot; id=&quot;mce-error-response&quot; style=&quot;display:none&quot;></div> 		<div class=&quot;response&quot; id=&quot;mce-success-response&quot; style=&quot;display:none&quot;></div> 	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->     <div style=&quot;position: absolute; left: -5000px;&quot;><input type=&quot;text&quot; name=&quot;b_9d503578c402cdc6d3fa96dd7_c0f44e11c0&quot; tabindex=&quot;-1&quot; value=&quot;&quot;></div>     <div class=&quot;clear&quot;><input type=&quot;submit&quot; value=&quot;Subscribe&quot; name=&quot;subscribe&quot; id=&quot;mc-embedded-subscribe&quot; class=&quot;button&quot;></div>     </div> </form> </div> <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script> <!--End mc_embed_signup-->" class="mail-list-form">
-		                                </iframe>
-		                            </form>
-		                        </div>
-		                    </div>
-		                </div>
-		            </section>
+		                    <iframe srcdoc="" class="mail-list-form">
+		                    </iframe>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
+		</section>
 		<!-- END: VARIANT GENERATED & CUSTOM HTML  -->
 
 
-	<!-- include footer partial -->
-	<% include ./partials/footer %>
+	<!-- include footer partial for stealth -->
+	<% include ./partials/footer-stealth %>
 	
 	<!-- include scripts partial -->
 	<% include ./partials/scripts %>
