@@ -1,96 +1,142 @@
-<style>
-.nav-1 .logo {margin-top: 5px;max-height: 72px;}
-.nav-1.shrink .logo {margin-top: 5px;max-height: 55px;}
-.nav-1 .menu {margin-top: 31px;}
-.nav-1.shrink .menu {margin-top: 21px;}
-.footer-1 img {max-height: 35px;}
-.avatar {max-width: 45px;}
-.tooltip {font-size: .9em}
-nav.overlay.dark .navbar, nav.overlay.fixed.dark .navbar, .nav-container.dark {
-	background: #1b3322;
-	background: rgba(27,51,34, 0);
-	border: none;
-	box-shadow: none;
-}
-nav.overlay.fixed.shrink.dark .navbar, .nav-container.dark {
-	background: #1b3322;
-	background: rgba(27,51,34,.8);
-}
-.bg-dark.color.gradient:before, .bg-dark.gradient:before, .contact-3:before, .contact-3 form:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	opacity: 1;
-}
-.bg-dark.gradient:before {
-	background-color: #333;
-	background-image: -webkit-gradient(linear, right top, left bottom, from(#444), to(#222));
-	background-image: -webkit-linear-gradient(right top, #444, #222);
-	background-image: -moz-linear-gradient(bottom left, #444, #222);
-	background-image: -o-linear-gradient(bottom left, #444, #222);
-	background-image: linear-gradient(to bottom right, #444, #222);
-}
-.bg-dark.color.gradient:before {
-	background-color: #498c5c;
-	background-image: -webkit-gradient(linear, left top, right bottom, from(#498c5c), to(#105376));
-	background-image: -webkit-linear-gradient(left top, #498c5c, #105376);
-	background-image: -moz-linear-gradient(bottom right, #498c5c, #105376);
-	background-image: -o-linear-gradient(bottom right, #498c5c, #105376);
-	background-image: linear-gradient(to bottom right, #498c5c, #105376);
-}
-h2.gradient {
-	background: -webkit-linear-gradient(left top, #498c5c, #105376);
-    background: linear-gradient(90deg, #498c5c, #105376);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 400;
-	font-size: 3em;
-}
-.contact-3:before {
-	opacity: .35;
-	background-image: url('/img/stealth-sphere.png');
-	background-repeat: no-repeat;
-	background-position: center 50%;
-	-ms-background-size: contain;
-	-o-background-size: contain;
-	-moz-background-size: contain;
-	-webkit-background-size: contain;
-	background-size: contain;
-}
-.contact-3.bg-secondary form {
-	background: transparent;
-	border: 1px solid #eee;
-	margin-top: 60px;
-}
-.contact-3 form:before {
-	background-color: #fff;
-	opacity: .4;
-}
-.contact-3 form input[type="text"] {
-	width: 100%;
-}
-.contact-3 form input[type="text"], .contact-3 form input[type="submit"], .contact-3 form p {
-	position: relative;
-}
-.footer-1 {
-	padding: 0 0 40px;
-}
-.features-1 {
-	padding: 75px 0;
-}
-.features-14 h4 {
-	margin-bottom: 10px;
-}
-.features-14 a {
-	margin-bottom: 10px;
-}
-.features-14 .hint {
-	opacity: .06;
-}
-.hover-gallery img {
-	max-width: 450px;
-}
+<style type="text/css">
+	.nav-1 .logo {margin-top: 5px;max-height: 72px;}
+	.nav-1.shrink .logo {margin-top: 5px;max-height: 55px;}
+	.nav-1 .menu {margin-top: 31px;}
+	.nav-1.shrink .menu {margin-top: 21px;}
+	.footer-1 img {max-height: 35px;}
+	.avatar {max-width: 45px;}
+	.tooltip {font-size: .9em}
+	nav.overlay.dark .navbar, nav.overlay.fixed.dark .navbar, .nav-container.dark {
+		background: #1b3322;
+		background: rgba(27,51,34, 0);
+		border: none;
+		box-shadow: none;
+	}
+	nav.overlay.fixed.shrink.dark .navbar, .nav-container.dark {
+		background: #1b3322;
+		background: rgba(27,51,34,.8);
+	}
+	.bg-dark.color.gradient:before, .bg-dark.gradient:before, .contact-3:before, .contact-3 form:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 1;
+	}
+	.bg-dark.gradient:before {
+		background-color: #333;
+		background-image: -webkit-gradient(linear, right top, left bottom, from(#444), to(#222));
+		background-image: -webkit-linear-gradient(right top, #444, #222);
+		background-image: -moz-linear-gradient(bottom left, #444, #222);
+		background-image: -o-linear-gradient(bottom left, #444, #222);
+		background-image: linear-gradient(to bottom right, #444, #222);
+	}
+	.bg-dark.color.gradient:before {
+		background-color: #498c5c;
+		background-image: -webkit-gradient(linear, left top, right bottom, from(#498c5c), to(#105376));
+		background-image: -webkit-linear-gradient(left top, #498c5c, #105376);
+		background-image: -moz-linear-gradient(bottom right, #498c5c, #105376);
+		background-image: -o-linear-gradient(bottom right, #498c5c, #105376);
+		background-image: linear-gradient(to bottom right, #498c5c, #105376);
+	}
+	h2.gradient {
+		background: -webkit-linear-gradient(left top, #498c5c, #105376);
+	    background: linear-gradient(90deg, #498c5c, #105376);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		font-weight: 400;
+		font-size: 2.5em;
+	}
+	.contact-3:before {
+		opacity: .35;
+		background-image: url('/img/stealth-sphere.png');
+		background-repeat: no-repeat;
+		background-position: center 25%;
+		-ms-background-size: contain;
+		-o-background-size: contain;
+		-moz-background-size: contain;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	.contact-3.bg-secondary form {
+		background: transparent;
+		border: 1px solid #eee;
+		margin-top: 20px;
+	}
+	.contact-3 form:before {
+		background-color: #fff;
+		opacity: .4;
+	}
+	.contact-3 form input[type="text"] {
+		width: 100%;
+	}
+	.contact-3 form input[type="text"], .contact-3 form input[type="submit"], .contact-3 form p {
+		position: relative;
+	}
+	.footer-1 {
+		padding: 0 0 40px;
+	}
+	.features-1 {
+		padding: 75px 0;
+	}
+	.features-14 h4 {
+		margin-bottom: 10px;
+	}
+	.features-14 .btn {
+		margin-bottom: 10px;
+		display: block;
+	}
+	.features-14 .hint {
+		opacity: .06;
+		margin-bottom: 1em;
+	}
+	.hover-gallery img {
+		max-width: 450px;
+	}
+	
+	section.features.features-14 {
+    	padding-top: 7em;
+    	text-align: center;
+	}
+	
+	/* Small devices (tablets, 768px and up) */
+	@media (min-width: 768px) { 
+		section.features.features-14 {
+    		padding-top: 40px;
+    		text-align: left;
+		}
+		.features-14 .btn {
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+		.features-14 .hint {
+			margin-bottom: 0;
+		}
+		h2.gradient {
+			font-size: 3em;
+		}
+		.contact-3:before {
+			background-position: center 35%;
+		}
+		.contact-3.bg-secondary form {
+			margin-top: 40px;
+		}
+	}
+
+	/* Medium devices (desktops, 992px and up) */
+	@media (min-width: 992px) {
+		.contact-3:before {
+			background-position: center 50%;
+		}
+		.contact-3.bg-secondary form {
+			margin-top: 60px;
+		}
+	}
+
+	/* Large devices (large desktops, 1200px and up) */
+	@media (min-width: 1200px) {
+		
+	}
 </style>
